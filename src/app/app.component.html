@@ -1,45 +1,46 @@
-<div class="w-screen h-20 bg-[var(--blue)] flex justify-between align-middle items-center overflow-hidden">
+<div class="w-screen h-20 bg-[var(--blue)] overflow-hidden">
 
-  <div class="h-full hidden min-[1050px]:w-1/4
-      min-[1050px]:flex">
-    <img src="../assets/images/roscher-gmbh-logo.jpg" alt="" class="h-full p-3">
-  </div>
-
-  <div class="justify-start hidden
-      min-[1050px]:justify-center min-[1050px]:w-1/2
-      min-[700px]:flex">
-    <div class="px-3">
-      <a href="" class="font-semibold text-lg p-1 text-white border-2 rounded-md hover:bg-white/30">Willkommen</a>
+  <div class="flex w-full h-full justify-between align-middle items-center min-[700px]:px-2 min-[1050px]:px-4">
+    <div class="h-full hidden min-[1050px]:w-1/4
+        min-[1050px]:flex">
+      <img src="../assets/images/roscher-gmbh-logo_red.png" alt="" class="h-full p-3">
     </div>
-    <div class="px-3">
-      <a href="" class="font-semibold text-lg p-1 text-white border-2 rounded-md hover:bg-white/30">Über uns</a>
+
+    <div class="justify-start hidden
+        min-[1050px]:justify-center min-[1050px]:w-1/2
+        min-[700px]:flex">
+      <div class="px-3">
+        <a href="" class="font-semibold text-lg p-">Willkommen</a>
+      </div>
+      <div class="animated-heading px-3">
+        <a href="" class="font-semibold text-lg p-1 text-white border-2 rounded-md hover:bg-white/30">Über uns</a>
+      </div>
+      <div class="animated-heading px-3">
+        <a href="" class="font-semibold text-lg p-1 text-white border-2 rounded-md hover:bg-white/30">Leistungen</a>
+      </div>
+      <div class="animated-heading px-3">
+        <a href="" class="font-semibold text-lg p-1 text-white border-2 rounded-md hover:bg-white/30">Partner</a>
+      </div>
     </div>
-    <div class="px-3">
-      <a href="" class="font-semibold text-lg p-1 text-white border-2 rounded-md hover:bg-white/30">Leistungen</a>
+    
+
+    <div class="flex justify-end pr-4 min-[1050px]:w-1/4">
+      <button class="group mx-2 relative p-1 overflow-hidden rounded-2xl bg-red-500 text-lg font-bold text-white" routerLink="kontakt">
+        Kontakt
+        <div class="absolute inset-0 h-full w-full scale-0 rounded-2xl transition-all duration-300 group-hover:scale-100 group-hover:bg-white/30"></div>
+      </button>
+      <button class="group mx-2 relative p-1 overflow-hidden rounded-2xl bg-red-500 text-lg font-bold text-white max-[800px]:hidden">
+        Bewerbung
+        <div class="absolute inset-0 h-full w-full scale-0 rounded-2xl transition-all duration-300 group-hover:scale-100 group-hover:bg-white/30"></div>
+      </button>
     </div>
-    <div class="px-3">
-      <a href="" class="font-semibold text-lg p-1 text-white border-2 rounded-md hover:bg-white/30">Partner</a>
+
+    <div class="pr-4 flex md:hidden">
+      <button class="">
+        <i class="fi fi-br-menu-burger text-white text-2xl"></i>
+      </button>
     </div>
   </div>
-  
-
-  <div class="flex justify-end pr-4 min-[1050px]:w-1/4">
-    <button class="group mx-2 relative p-1 overflow-hidden rounded-2xl bg-red-500 text-lg font-bold text-white" routerLink="kontakt">
-      Kontakt
-      <div class="absolute inset-0 h-full w-full scale-0 rounded-2xl transition-all duration-300 group-hover:scale-100 group-hover:bg-white/30"></div>
-    </button>
-    <button class="group mx-2 relative p-1 overflow-hidden rounded-2xl bg-red-500 text-lg font-bold text-white max-[800px]:hidden">
-      Bewerbung
-      <div class="absolute inset-0 h-full w-full scale-0 rounded-2xl transition-all duration-300 group-hover:scale-100 group-hover:bg-white/30"></div>
-    </button>
-  </div>
-
-  <div class="pr-4 flex md:hidden">
-    <button class="">
-      <i class="fi fi-br-menu-burger text-white text-2xl"></i>
-    </button>
-  </div>
-
 </div>
 
 <router-outlet></router-outlet>

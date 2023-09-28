@@ -1,0 +1,78 @@
+<div class="max-w-[90%] m-auto py-5 min-[1000px]:flex">
+
+    <div class="min-[1000px]:w-1/3 max-[1000px]:mx-5 h-full pt-10" data-aos="fade-right" data-aos-duration="1000">
+        <h2 class="font-bold text-[var(--blue)] text-3xl">Senden Sie uns Ihre Nachricht!</h2>
+        <div>
+            <p>Ganz einfach Fragen, Anregungen oder sonstige Nachrichten über das Kontaktformular absenden.</p>
+            <p class="pb-3">Alternativ können Sie uns auch unter unserer Anschrift kontaktieren:</p>
+            <p class="font-semibold text-xl">Roscher GmbH</p>
+            <p class="font-semibold text-xl">Neumarkt 5</p>
+            <p class="font-semibold text-xl">09661 Hainichen</p>
+
+        </div>
+    </div>
+
+    <div class="min-[1000px]:w-2/3 max-[1000px]:mx-5 pt-10 mx-2 bg-[var(--grey)] rounded-md shadow-xl" data-aos="fade-left" data-aos-duration="1000">
+        <form class="min-w-[200px] max-w-[1000px] w-full m-auto h-fullblock
+                        sm:p-4 rounded-md" 
+                        [formGroup]="contactForm" (ngSubmit)="sendMail()">
+
+            <div class="min-[1000px]:flex min-[1000px]:justify-center">
+                <div class="flex justify-center w-[90%] max-[1000px]:m-auto min-[1000px]:w-[45%] min-[1000px]:pr-2">
+                    <mat-form-field class="example-full-width w-full m-auto mb-3">
+                        <mat-icon matIconPrefix>person</mat-icon>
+                        <mat-label class="">Name/Firma</mat-label>
+                        <input class="text-[var(--secondary-color)]" type="text" matInput formControlName="name" [(ngModel)]="name">
+                        <mat-error *ngIf="contactForm.controls['name'].hasError('required')">
+                            Vorname wird benötigt!
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+    
+                <div class="flex justify-center w-[90%] max-[1000px]:m-auto min-[1000px]:w-[45%] min-[1000px]:pl-2">
+                    <mat-form-field class="example-full-width w-full m-auto mb-3">
+                        <mat-icon matIconPrefix>mail</mat-icon>
+                        <mat-label class="">Email</mat-label>
+                        <input class="text-[var(--secondary-color)]" type="text" matInput formControlName="email" [(ngModel)]="email">
+                        <mat-error *ngIf="contactForm.controls['email'].hasError('email') && !contactForm.controls['email'].hasError('required')">
+                            Bitte geben Sie eine gültige Email ein!
+                        </mat-error>
+                        <mat-error *ngIf="contactForm.controls['email'].hasError('required')">
+                            Email wird benötigt!
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+            </div>
+            
+            <div class="flex justify-center w-[90%] m-auto">
+                <mat-form-field class="w-full m-auto mb-3">
+                    <mat-icon matIconPrefix>person</mat-icon>
+                    <mat-label class="">Betreff</mat-label>
+                    <input class="text-[var(--secondary-color)]" type="text" matInput formControlName="subject" [(ngModel)]="subject">
+                    <mat-error *ngIf="contactForm.controls['subject'].hasError('required')">
+                        Betreff wird benötigt!
+                    </mat-error>
+                </mat-form-field>
+            </div>
+            
+            <div class="flex justify-center w-[90%] m-auto">
+                <mat-form-field class="w-full m-auto mb-3">
+                    <mat-label>Ihre Nachricht an uns</mat-label>
+                    <textarea matInput formControlName="message" [(ngModel)]="message" cdkTextareaAutosize cdkAutosizeMinRows="5" cdkAutosizeMaxRows="5"></textarea>
+                    <mat-error *ngIf="contactForm.controls['message'].hasError('required')">
+                        Eine Nachricht wird benötigt!
+                    </mat-error>
+                </mat-form-field>
+            </div>
+
+            <div class="block">
+                <div class="flex justify-center">
+                    <button type="submit" [attr.disabled]="contactForm.valid ? null : true"
+                    class="bg-[var(--blue)] text-white p-3 w-80 m-auto ease-in duration-300 hover:valid:bg-indigo-800 disabled:bg-slate-500">Registrieren</button>
+                </div>
+            </div>
+        </form>
+
+        
+    </div>
+</div>

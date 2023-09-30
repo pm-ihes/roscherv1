@@ -1,11 +1,12 @@
-<div class="max-w-[95%] m-auto py-5 bg-gray-300 min-[1000px]:flex">
+<div class="w-full m-auto py-5 px-1 bg-gray-100
+min-[700px]:px-6 min-[1000px]:flex">
 
-    <div class="animate__animated animate__fadeInLeft mx-2 pt-10
-    min-[1000px]:w-1/3 min-[1000px]:mx-5">
+    <div class="animate__animated animate__fadeInLeft px-4 mx-2 pt-10 rounded-md bg-gray-300 shadow-xl shadow-gray-500
+    min-[1000px]:w-1/3 min-[1000px]:mx-5 max-[700px]:mb-6">
         <h2 class="font-bold text-[var(--blue)] text-4xl">Kontaktieren Sie uns ganz einfach online!</h2>
         <div class="py-6">
             <div class="py-2 text-xl">
-                <p>Ihre Fragen, Anregungen oder andere Nachrichten direkt onlie absenden.</p>
+                <p>Ihre Fragen, Anregungen oder andere Nachrichten direkt online absenden.</p>
                 <p>Alternativ können Sie uns auch unter unserer Anschrift kontaktieren:</p>
             </div>
             <div class="py-2 text-xl text-[var(--red)]">
@@ -22,8 +23,8 @@
         </div>
     </div>
 
-    <div class="animate__animated animate__fadeInRigh bg-blue-950/40 rounded-md shadow-xl
-    min-[1000px]:w-2/3 min-[1000px]:mx-5 pt-10 mx-2">
+    <div class="animate__animated animate__fadeInRight pt-10 mx-2 bg-gray-300 rounded-md shadow-xl shadow-gray-500
+    min-[1000px]:w-2/3 min-[1000px]:mx-5">
         <form class="min-w-[200px] max-w-[1000px] w-full m-auto h-fullblock
                         sm:p-4 rounded-md" 
                         [formGroup]="contactForm" (ngSubmit)="sendMail()">
@@ -86,7 +87,7 @@
             <div class="block">
                 <div class="flex justify-center">
                     <button type="submit" [attr.disabled]="contactForm.valid ? null : true"
-                    class="group mx-2 relative py-1 px-4 overflow-hidden rounded-2xl bg-red-500 disabled:bg-slate-500 text-lg font-bold disabled:cursor-not-allowed text-white max-[700px]:mb-2">
+                    class="group mx-2 relative py-1 px-4 overflow-hidden rounded-2xl bg-[var(--red)] disabled:bg-slate-500 text-lg font-bold disabled:cursor-not-allowed disabled:line-through text-white max-[700px]:mb-2">
                         Absenden
                         <div class="absolute inset-0 h-full w-full scale-0 rounded-2xl transition-all duration-300 group-hover:group-enabled:scale-100 group-hover:bg-white/30"></div>
                     </button>

@@ -1,8 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
 :root{
     --red: #e30713;
-    --grey: #d9d9d9;
+    --gray: #d9d9d9;
     --blue: #24415c;
+    --blue2: #6c7794;
 }
 
 @tailwind base;
@@ -19,3 +20,10 @@ body {
     font-family: Poppins !important; 
     overflow-x: hidden;
 }
+
+.pattern{
+    background-image:  radial-gradient(#24415c 0.8px, transparent 0.8px), radial-gradient(#24415c 0.8px, #e5e5f7 0.8px);
+    background-size: 32px 32px;
+    background-position: 0 0,16px 16px;
+}
+

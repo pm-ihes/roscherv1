@@ -15,7 +15,9 @@ import {MatIconModule} from '@angular/material/icon';
 import { ApplicationComponent } from './application/application.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatInputModule} from '@angular/material/input';
-import { NavbarComponent } from './navbar/navbar.component'
+import { NavbarComponent } from './navbar/navbar.component';
+import { ServicesComponent } from './services/services.component';
+import { ServiceOverviewComponent } from './service-overview/service-overview.component'
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { NavbarComponent } from './navbar/navbar.component'
     ContactComponent,
     WelcomeComponent,
     ApplicationComponent,
-    NavbarComponent
+    NavbarComponent,
+    ServicesComponent,
+    ServiceOverviewComponent
   ],
   imports: [
     BrowserModule,

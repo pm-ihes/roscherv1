@@ -14,7 +14,8 @@ import {MatMenuModule} from '@angular/material/menu';
 import {MatIconModule} from '@angular/material/icon';
 import { ApplicationComponent } from './application/application.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import {MatInputModule} from '@angular/material/input'
+import {MatInputModule} from '@angular/material/input';
+import { NavbarComponent } from './navbar/navbar.component'
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import {MatInputModule} from '@angular/material/input'
     FooterComponent,
     ContactComponent,
     WelcomeComponent,
-    ApplicationComponent
+    ApplicationComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,

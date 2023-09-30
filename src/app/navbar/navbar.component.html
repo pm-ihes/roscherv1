@@ -1,0 +1,80 @@
+<div class="w-screen h-20 bg-[var(--blue)] relative">
+
+    <div class="z-20 flex w-full h-full justify-between align-middle items-center min-[700px]:px-2 min-[1050px]:px-4 max-[700px]:absolute bg-[var(--blue)]">
+      <div class="h-full min-[1050px]:w-1/4
+          min-[1050px]:flex">
+        <a routerLink="">
+          <img src="../assets/images/roscher-gmbh-logo_red.png" alt="" class="h-full p-3">
+        </a>
+      </div>
+  
+      <div class="justify-start hidden
+          min-[1050px]:justify-center min-[1050px]:w-1/2
+          min-[700px]:flex text-center">
+        <div class="px-3">
+          <a class="font-semibold text-lg p-" routerLink="">
+            <span class="link link-underline text-white">Willkommen</span>
+          </a>
+        </div>
+        <div class="px-3">
+          <a class="font-semibold text-lg p-">
+            <span class="link link-underline text-white">Über uns</span>
+          </a>
+        </div>
+        <div class="px-3">
+          <a class="font-semibold text-lg p-">
+            <span class="link link-underline text-white">Partner</span>
+          </a>
+        </div>
+        <div class="px-3">
+          <a class="font-semibold text-lg p-">
+            <span class="link link-underline text-white">Leistungen</span>
+          </a>
+        </div>
+      </div>
+      <div class="flex justify-end pr-4 min-[1050px]:w-1/4 max-[800px]:hidden">
+        <button class="group mx-2 relative p-1 overflow-hidden rounded-2xl bg-red-500 text-lg font-bold text-white" routerLink="kontakt">
+          Kontakt
+          <div class="absolute inset-0 h-full w-full scale-0 rounded-2xl transition-all duration-300 group-hover:scale-100 group-hover:bg-white/30"></div>
+        </button>
+        <button class="group mx-2 relative p-1 overflow-hidden rounded-2xl bg-red-500 text-lg font-bold text-white" routerLink="bewerbung">
+          Bewerbung
+          <div class="absolute inset-0 h-full w-full scale-0 rounded-2xl transition-all duration-300 group-hover:scale-100 group-hover:bg-white/30"></div>
+        </button>
+      </div>
+  
+      <div class="pr-4 pt-7 absolute top-0 right-0 md:hidden" *ngIf="menuToggled">
+        <button class="" (click)="menuOpenToggle()">
+          <i class="fi fi-br-menu-burger text-white text-2xl"></i>
+        </button>
+      </div>
+
+      <div class="pr-4 pt-7 absolute top-0 right-0 md:hidden" *ngIf="!menuToggled">
+        <button class="" (click)="menuOpenToggle()">
+          <i class="fi fi-br-cross text-white text-2xl"></i>
+        </button>
+      </div>
+    </div>
+
+    <div id="menu" class="absolute top-[-150px] w-full py-2 block bg-[var(--blue)] z-10 transition-all duration-500 min-[700px]:hidden">
+        <div class="w-full py-1 text-center">
+            <a href="" class="text-white text-xl">Willkommen</a>
+        </div>
+        <div class="w-full py-1 text-center">
+            <a href="" class="text-white text-xl">Über uns</a>
+        </div>
+        <div class="w-full py-1 text-center">
+            <a href="" class="text-white text-xl">Leistungen</a>
+        </div>
+        <div class="w-full py-1 text-center">
+            <a href="" class="text-white text-xl">Partner</a>
+        </div>
+        <div class="w-full py-1 text-center">
+            <a href="" class="text-[var(--red)] text-xl font-semibold uppercase" routerLink="kontakt">Kontakt</a>
+        </div>
+        <div class="w-full py-1 text-center">
+            <a href="" class="text-[var(--red)] text-xl font-semibold uppercase" routerLink="bewerbung">Bewerbung</a>
+        </div>
+    </div>
+
+  </div>

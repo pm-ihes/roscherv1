@@ -1,18 +1,29 @@
-<div class="max-w-[90%] m-auto py-5 min-[1000px]:flex">
+<div class="max-w-[95%] m-auto py-5 bg-gray-300 min-[1000px]:flex">
 
-    <div class="min-[1000px]:w-1/3 max-[1000px]:mx-5 h-full pt-10" data-aos="fade-right" data-aos-duration="1000">
-        <h2 class="font-bold text-[var(--blue)] text-3xl">Senden Sie uns Ihre Nachricht!</h2>
-        <div>
-            <p>Ganz einfach Fragen, Anregungen oder sonstige Nachrichten über das Kontaktformular absenden.</p>
-            <p class="pb-3">Alternativ können Sie uns auch unter unserer Anschrift kontaktieren:</p>
-            <p class="font-semibold text-xl">Roscher GmbH</p>
-            <p class="font-semibold text-xl">Neumarkt 5</p>
-            <p class="font-semibold text-xl">09661 Hainichen</p>
-
+    <div class="animate__animated animate__fadeInLeft mx-2 pt-10
+    min-[1000px]:w-1/3 min-[1000px]:mx-5">
+        <h2 class="font-bold text-[var(--blue)] text-4xl">Kontaktieren Sie uns ganz einfach online!</h2>
+        <div class="py-6">
+            <div class="py-2 text-xl">
+                <p>Ihre Fragen, Anregungen oder andere Nachrichten direkt onlie absenden.</p>
+                <p>Alternativ können Sie uns auch unter unserer Anschrift kontaktieren:</p>
+            </div>
+            <div class="py-2 text-xl text-[var(--red)]">
+                <p class="font-semibold">Roscher GmbH</p>
+                <p class="font-semibold">Neumarkt 5</p>
+                <p class="font-semibold">09661 Hainichen</p>
+            </div>
+            <div class="py-2 min-[700px]:pt-10 text-xl">
+                <p>Oder rufen Sie uns einfach an:</p>
+            </div>
+            <div class="py-2 text-xl text-[var(--red)]">
+                <p class="font-semibold">037207 8960</p>
+            </div>
         </div>
     </div>
 
-    <div class="min-[1000px]:w-2/3 max-[1000px]:mx-5 pt-10 mx-2 bg-[var(--grey)] rounded-md shadow-xl" data-aos="fade-left" data-aos-duration="1000">
+    <div class="animate__animated animate__fadeInRigh bg-blue-950/40 rounded-md shadow-xl
+    min-[1000px]:w-2/3 min-[1000px]:mx-5 pt-10 mx-2">
         <form class="min-w-[200px] max-w-[1000px] w-full m-auto h-fullblock
                         sm:p-4 rounded-md" 
                         [formGroup]="contactForm" (ngSubmit)="sendMail()">
@@ -33,7 +44,7 @@
                     <mat-form-field class="example-full-width w-full m-auto mb-3">
                         <mat-icon matIconPrefix>mail</mat-icon>
                         <mat-label class="">Email</mat-label>
-                        <input class="text-[var(--secondary-color)]" type="text" matInput formControlName="email" [(ngModel)]="email">
+                        <input class="" type="text" matInput formControlName="email" [(ngModel)]="email">
                         <mat-error *ngIf="contactForm.controls['email'].hasError('email') && !contactForm.controls['email'].hasError('required')">
                             Bitte geben Sie eine gültige Email ein!
                         </mat-error>
@@ -46,7 +57,7 @@
             
             <div class="flex justify-center w-[90%] m-auto">
                 <mat-form-field class="w-full m-auto mb-3">
-                    <mat-icon matIconPrefix>person</mat-icon>
+                    <mat-icon matIconPrefix>subject</mat-icon>
                     <mat-label class="">Betreff</mat-label>
                     <input class="text-[var(--secondary-color)]" type="text" matInput formControlName="subject" [(ngModel)]="subject">
                     <mat-error *ngIf="contactForm.controls['subject'].hasError('required')">
@@ -65,14 +76,22 @@
                 </mat-form-field>
             </div>
 
+
+            <div class="flex justify-center items-center w-[90%] m-auto pb-4">
+                <input id="privacy" formControlName="privacy" aria-describedby="remember" type="checkbox" class="bg-gray-50 border-gray-300 focus:ring-3 focus:ring-blue-300 h-4 w-4 rounded" required="">
+                <label for="privacy" class="text-gray-900 pl-2">Ich bin mit der Speicherung meiner Daten zur Kontaktaufnahme einverstanden <span class="text-red-700">*</span></label>
+            </div>
+            
+
             <div class="block">
                 <div class="flex justify-center">
                     <button type="submit" [attr.disabled]="contactForm.valid ? null : true"
-                    class="bg-[var(--blue)] text-white p-3 w-80 m-auto ease-in duration-300 hover:valid:bg-indigo-800 disabled:bg-slate-500">Registrieren</button>
+                    class="group mx-2 relative py-1 px-4 overflow-hidden rounded-2xl bg-red-500 disabled:bg-slate-500 text-lg font-bold disabled:cursor-not-allowed text-white max-[700px]:mb-2">
+                        Absenden
+                        <div class="absolute inset-0 h-full w-full scale-0 rounded-2xl transition-all duration-300 group-hover:group-enabled:scale-100 group-hover:bg-white/30"></div>
+                    </button>
                 </div>
             </div>
         </form>
-
-        
     </div>
 </div>

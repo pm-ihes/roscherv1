@@ -5,6 +5,8 @@ import { ContactComponent } from './contact/contact.component';
 import { ApplicationComponent } from './application/application.component';
 import { ServiceOverviewComponent } from './service-overview/service-overview.component';
 import { PartnerOverviewComponent } from './partner-overview/partner-overview.component';
+import { HistorieComponent } from './historie/historie.component';
+import { KarriereComponent } from './karriere/karriere.component';
 
 const routes: Routes = [
   {path: "", component: WelcomeComponent},
@@ -12,7 +14,9 @@ const routes: Routes = [
   {path: "kontakt", component: ContactComponent},
   {path: "bewerbung", component: ApplicationComponent},
   {path: "leistungen", component: ServiceOverviewComponent},
-  {path: "partner", component: PartnerOverviewComponent}
+  {path: "partner", component: PartnerOverviewComponent},
+  {path: "historie", component: HistorieComponent},
+  {path: "karriere", component: KarriereComponent},
 ];
 
 @NgModule({

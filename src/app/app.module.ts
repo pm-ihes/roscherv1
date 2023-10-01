@@ -22,6 +22,7 @@ import { PartnerOverviewComponent } from './partner-overview/partner-overview.co
 import { PartnerElementComponent } from './partner-overview/partner-element/partner-element.component';
 import { ServiceElementComponent } from './service-overview/service-element/service-element.component';
 import { HistorieComponent } from './historie/historie.component';
+import { KarriereComponent } from './karriere/karriere.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { HistorieComponent } from './historie/historie.component';
     PartnerOverviewComponent,
     PartnerElementComponent,
     ServiceElementComponent,
-    HistorieComponent
+    HistorieComponent,
+    KarriereComponent
   ],
   imports: [
     BrowserModule,

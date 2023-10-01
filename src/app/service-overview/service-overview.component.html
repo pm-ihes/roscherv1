@@ -1,1 +1,45 @@
-<p>service-overview works!</p>
+<section class="w-screen min-[700px]:h-screen overflow-hidden bg-gray-100">
+    <div class="w-full h-full">
+        <div class="pt-6 min-[700px]:pt-12 pb-2 text-center">
+            <h2 class="text-3xl font-semibold text-[var(--blue)] min-[700px]:text-4xl">Unsere <span class="text-[var(--red)]">Leistungen</span> im Überblick:</h2>
+        </div>
+
+        <div class="w-full h-full py-4 justify-center block
+        min-[700px]:flex min-[700px]:pt-10">
+
+            <!--Heizung-->
+            <app-service-element 
+                class="animate__animated animate__fadeInLeft"
+                title="Heizung" 
+                imageSource="../../assets/icons/temperature-high.png"
+                text="Wie wäre es mit Energieeffizienz, Umweltbewusstsein, Kostenersparnis, mehr Sicherheit, Platzersparnis, coolem Desing und einer extra Finanzspritze durch Förderungen?">
+            </app-service-element>
+
+            <!--Klima-->
+            <app-service-element 
+                class="animate__animated animate__fadeInLeft"
+                title="Klima" 
+                imageSource="../../assets/icons/snowflake.png"
+                text="Wie wäre es mit Energieeffizienz, Umweltbewusstsein, Kostensenkungen, erhöhter Sicherheit, Platzersparnis, stylischem Design und zusätzlicher finanzieller Unterstützung durch Förderprogramme?">
+            </app-service-element>
+
+            <!--Sanitär-->
+            <app-service-element 
+                class="animate__animated animate__fadeInRight"
+                title="Klima" 
+                imageSource="../../assets/icons/faucet.png"
+                text="Stellen Sie sich ein Angebot vor, das Energieeffizienz, Umweltbewusstsein, Kostenreduzierung, Platzoptimierung, erhöhte Sicherheit, attraktives Design und fianzielle Unterstützung durch Fördermittel perfekt kombiniert.">
+            </app-service-element>
+
+            <!--Lüftung-->
+            <app-service-element 
+                class="animate__animated animate__fadeInRight"
+                title="Klima" 
+                imageSource="../../assets/icons/fan.png"
+                text="Stellen Sie sich ein Angebot vor, das Energieeffizienz, Umweltbewusstsein, Kostenreduzierung, Platzoptimierung, erhöhte Sicherheit, attraktives Design und fianzielle Unterstützung durch Fördermittel perfekt kombiniert.">
+            </app-service-element>
+           
+        </div>
+    </div>
+
+</section>

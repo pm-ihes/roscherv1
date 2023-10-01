@@ -16,8 +16,12 @@ import { ApplicationComponent } from './application/application.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatInputModule} from '@angular/material/input';
 import { NavbarComponent } from './navbar/navbar.component';
-import { ServicesComponent } from './services/services.component';
-import { ServiceOverviewComponent } from './service-overview/service-overview.component'
+import { ServiceOverviewComponent } from './service-overview/service-overview.component';
+import {MatDividerModule} from '@angular/material/divider';
+import { PartnerOverviewComponent } from './partner-overview/partner-overview.component';
+import { PartnerElementComponent } from './partner-overview/partner-element/partner-element.component';
+import { ServiceElementComponent } from './service-overview/service-element/service-element.component';
+import { HistorieComponent } from './historie/historie.component';
 
 @NgModule({
   declarations: [
@@ -27,8 +31,11 @@ import { ServiceOverviewComponent } from './service-overview/service-overview.co
     WelcomeComponent,
     ApplicationComponent,
     NavbarComponent,
-    ServicesComponent,
-    ServiceOverviewComponent
+    ServiceOverviewComponent,
+    PartnerOverviewComponent,
+    PartnerElementComponent,
+    ServiceElementComponent,
+    HistorieComponent
   ],
   imports: [
     BrowserModule,
@@ -42,6 +49,7 @@ import { ServiceOverviewComponent } from './service-overview/service-overview.co
     FormsModule,
     ReactiveFormsModule,
     MatInputModule,
+    MatDividerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

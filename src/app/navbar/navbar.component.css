@@ -15,3 +15,9 @@
     background-size: 100% 3px;
     background-position: 50% 100%
 }
+
+a.active .link-underline{
+    background-size: 100% 3px;
+    background-position: 50% 100%
+
+}

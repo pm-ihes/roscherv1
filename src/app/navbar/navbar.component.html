@@ -1,4 +1,4 @@
-<div class="w-screen h-20 bg-[var(--blue)] relative">
+<div class="w-screen h-20 bg-[var(--blue)] relative shadow-md">
 
     <div class="z-20 flex w-full h-full justify-between align-middle items-center min-[700px]:px-2 min-[1050px]:px-4 max-[700px]:absolute bg-[var(--blue)]">
       <div class="h-full min-[1050px]:w-1/4
@@ -12,22 +12,22 @@
           min-[1050px]:justify-center min-[1050px]:w-1/2
           min-[700px]:flex text-center">
         <div class="px-3">
-          <a class="font-semibold text-lg p-" routerLink="">
+          <a class="font-semibold text-lg p-" routerLink="home" routerLinkActive="active">
             <span class="link link-underline text-white">Willkommen</span>
           </a>
         </div>
         <div class="px-3">
-          <a class="font-semibold text-lg p-">
+          <a class="font-semibold text-lg p-" routerLink="about" routerLinkActive="active">
             <span class="link link-underline text-white">Über uns</span>
           </a>
         </div>
         <div class="px-3">
-          <a class="font-semibold text-lg p-">
+          <a class="font-semibold text-lg p-" routerLink="partner" routerLinkActive="active">
             <span class="link link-underline text-white">Partner</span>
           </a>
         </div>
         <div class="px-3">
-          <a class="font-semibold text-lg p-">
+          <a class="font-semibold text-lg p-" routerLink="leistungen" routerLinkActive="active">
             <span class="link link-underline text-white">Leistungen</span>
           </a>
         </div>
@@ -58,22 +58,22 @@
 
     <div id="menu" class="absolute top-[-150px] w-full py-2 block bg-[var(--blue)] z-10 transition-all duration-500 min-[700px]:hidden">
         <div class="w-full py-1 text-center">
-            <a href="" class="text-white text-xl">Willkommen</a>
+            <a class="text-white text-xl" routerLink="home">Willkommen</a>
         </div>
         <div class="w-full py-1 text-center">
             <a href="" class="text-white text-xl">Über uns</a>
         </div>
         <div class="w-full py-1 text-center">
-            <a href="" class="text-white text-xl">Leistungen</a>
-        </div>
-        <div class="w-full py-1 text-center">
             <a href="" class="text-white text-xl">Partner</a>
         </div>
         <div class="w-full py-1 text-center">
-            <a href="" class="text-[var(--red)] text-xl font-semibold uppercase" routerLink="kontakt">Kontakt</a>
+          <a class="text-white text-xl" routerLink="leistungen">Leistungen</a>
+      </div>
+        <div class="w-full py-1 text-center">
+            <a class="text-[var(--red)] text-xl font-semibold uppercase" routerLink="kontakt">Kontakt</a>
         </div>
         <div class="w-full py-1 text-center">
-            <a href="" class="text-[var(--red)] text-xl font-semibold uppercase" routerLink="bewerbung">Bewerbung</a>
+            <a class="text-[var(--red)] text-xl font-semibold uppercase" routerLink="bewerbung">Bewerbung</a>
         </div>
     </div>
 

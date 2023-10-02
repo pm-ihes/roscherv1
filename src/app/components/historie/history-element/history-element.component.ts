@@ -24,4 +24,10 @@ export class HistoryElementComponent {
 
   @Input()
   imageSource: string = "";
+
+  @Input()
+  imageHeight: string = "";
+
+  @Input()
+  translateTop: string = "";
 }

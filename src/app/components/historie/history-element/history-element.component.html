@@ -1,8 +1,10 @@
 <div [ngClass]=" left ? '' : 'min-[700px]:flex-row-reverse' "
-class="relative flex items-center justify-between min-[700px]:justify-normal group is-active">
+class="relative flex items-center justify-between min-[700px]:justify-normal group is-active {{translateTop}}
+max-[700px]:pb-4 max-[700px]:mr-4">
     <!-- Icon -->
     <div [ngClass]=" left ? 'min-[700px]:translate-x-7' : 'min-[700px]:-translate-x-7' "
-    class="flex items-center justify-center w-6 h-6 rounded-full border border-white bg-[var(--blue)] shadow shrink-0 md:order-1">
+    class="flex items-center justify-center w-6 h-6 rounded-full border border-white bg-[var(--blue)] shadow shrink-0 md:order-1 
+    max-[700px]:translate-x-2">
     </div>
 
     <!-- Card -->
@@ -14,7 +16,7 @@ class="relative flex items-center justify-between min-[700px]:justify-normal gro
         <div class="text-[var(--blue)] text-justify"> {{ message }} <div>
     </div>
 
-    <div *ngIf="image" class="w-full h-20">
+    <div *ngIf="image" class="w-full {{imageHeight}}">
         <img [src]="imageSource" alt="" class="w-full h-full object-cover">
     </div>
 </div>

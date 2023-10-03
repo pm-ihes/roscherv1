@@ -24,6 +24,7 @@ import { ServiceElementComponent } from './components/service-overview/service-e
 import { HistorieComponent } from './components/historie/historie.component';
 import { KarriereComponent } from './components/karriere/karriere.component';
 import { HistoryElementComponent } from './components/historie/history-element/history-element.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -54,7 +55,8 @@ import { HistoryElementComponent } from './components/historie/history-element/h
     FormsModule,
     ReactiveFormsModule,
     MatInputModule,
-    MatDividerModule
+    MatDividerModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

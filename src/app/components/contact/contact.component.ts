@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import AOS from 'aos';
+import { HttpService } from 'src/app/services/http.service';
 
 @Component({
   selector: 'app-contact',
@@ -16,7 +17,7 @@ export class ContactComponent implements OnInit{
   subject = "";
   message = "";
 
-  constructor (private formBuilder: FormBuilder) {}
+  constructor (private formBuilder: FormBuilder, private httpService: HttpService) {}
 
   ngOnInit(): void {
     
@@ -34,6 +35,19 @@ export class ContactComponent implements OnInit{
 
   sendMail () {
 
+    let user = {
+      name: this.name,
+      email: this.email
+    }
+
+    this.httpService.sendEmail('http://localhost:3000/sendmail', user).subscribe(
+      data => {
+        let res: any = data;
+        console.log(`Email erfolgreich an ${user.email} gesendet`);
+      }, err => {
+        console.log(err);
+      }
+    );
   }
 
 }

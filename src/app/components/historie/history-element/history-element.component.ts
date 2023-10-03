@@ -9,12 +9,9 @@ export class HistoryElementComponent {
 
   @Input()
   left: boolean = true;
-
+  
   @Input()
   title: string = "";
-
-  @Input()
-  date: string = "";
 
   @Input()
   message: string = "";
@@ -30,4 +27,7 @@ export class HistoryElementComponent {
 
   @Input()
   translateTop: string = "";
+
+  @Input()
+  paddingBottom: string = "";
 }

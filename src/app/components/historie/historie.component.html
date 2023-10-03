@@ -6,32 +6,79 @@
 
         <div class="mx-auto pb-10 py-4
         min-[700px]:w-[80%] min-[700px]:pt-10">
-            <div class="space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-slate-300 before:to-transparent">
+            <div class="space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px before:h-full before:w-0.5 before:bg-gradient-to-b before:from-slate-200 before:via-slate-400 before:to-slate-200
+            min-[700px]:before:mx-auto min-[700px]:before:translate-x-0">
 
                 <app-history-element 
                     [left]="true"
-                    title="Firmengründung"
-                    date="1804"
+                    title="Firmengründung (1804)"
                     message="Gründung der Firma als Klempner und Kupferschmiede durch Herrn Paul Lange im Hinterhof, Brückenstraße 10 in Hainichen"
-                    [image]="true"
-                    imageSource="der"
-                    imageHeight="h-[40vh]">
+                    [image]="false">
                 </app-history-element>
 
                 <app-history-element 
                     [left]="false"
-                    title="Firmengründung"
-                    date="1804"
-                    message="Gründung der Firma als Klempner und Kupferschmiede durch Herrn Paul Lange im Hinterhof, Brückenstraße 10 in Hainichen"
+                    title="1804"
+                    message="Kauf der Firma durch Familie Preuße, Anbau eines Ladengeschäftes. Firmentradition durch Fam. Preuße bis Anfang 20.Jht."
+                    [image]="true"
+                    imageSource="../../assets/images/hist_1.jpg"
+                    imageHeight="h-[40vh]"
+                    translateTop="min-[700px]:-mt-24">
+                </app-history-element>
+                
+                <app-history-element 
+                    [left]="true"
+                    title="1912"
+                    message="wurde die Firma an Hermann Enge (Schwiegersohn) verkauft."
                     [image]="false"
-                    translateTop="-mt-10">
+                    translateTop="min-[700px]:-mt-[20vh]"
+                    paddingBottom="min-[700px]:pb-4">
                 </app-history-element>
 
-                <app-history-element [left]="false"></app-history-element>
-                <app-history-element [left]="true"></app-history-element>
-                <app-history-element [left]="false"></app-history-element>
-                <app-history-element></app-history-element>
-            
+                <app-history-element 
+                    [left]="true"
+                    title="1920 - 1932"
+                    message="war Hermann Preuße Obermeister der Klempnerinnung des königlichen Amtsbezirkes Hainichen.
+                    Erweiterung des Ladengeschäftes Brückenstraße 10, erste Sanitärausstellung eröffnet. Auslagerung von Werkstatt und Lager in die Brauhofstraße 10. Sohn Walter Enge stellte sich auf die Heizungs-und Sanitärinstallation ein. Von 1924-1926 besuchte er die Höhere Deutsche Fachschule für Metallverarbeitung und Installation in Aue. Dadurch war es möglich Heizungsanlagen zu planen und installieren."
+                    [image]="false">
+                </app-history-element>
+
+                <app-history-element 
+                    [left]="false"
+                    title="1930"
+                    message="legte er [Walter Enge] vor der Meisterprüfungskommission der Gewerbekammer in Chemnitz seine Meisterprüfung ab."
+                    [image]="true"
+                    imageSource="../../assets/images/hist_meisterbrief.jpeg"
+                    imageHeight="h-[60vh]"
+                    translateTop="min-[700px]:-mt-40">
+                </app-history-element>
+
+                <app-history-element 
+                    [left]="true"
+                    title="1943"
+                    message="Walter Enge kaufte die Firma von seinem Vater ab. Er projektierte und installierte Heizungsanlagen, Sanitärinstallationen für große Firmen, Fabriken und Privatkunden der Stadt Hainichen."
+                    [image]="true"
+                    imageSource="../../assets/images/hist_3.jpeg"
+                    translateTop="min-[700px]:-mt-60">
+                </app-history-element>
+
+                <app-history-element 
+                    [left]="false"
+                    title="1954"
+                    message="wurde das 150-jährige Bestehen der Firma gefeiert"
+                    [image]="false"
+                    paddingBottom="min-[700px]:pb-4">
+                </app-history-element>
+
+                <app-history-element 
+                    [left]="false"
+                    title="1943"
+                    message="Walter Enge kaufte die Firma von seinem Vater ab. Er projektierte und installierte Heizungsanlagen, Sanitärinstallationen für große Firmen, Fabriken und Privatkunden der Stadt Hainichen."
+                    [image]="false"
+                    translateTop="min-[700px]:-mt-60"
+                    paddingBottom="min-[700px]:pb-4">
+                </app-history-element>
+
             </div>
         </div>
 

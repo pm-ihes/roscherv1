@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, NgZone, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import AOS from 'aos';
+import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 import { HttpService } from 'src/app/services/http.service';
 
 @Component({
@@ -17,11 +18,15 @@ export class ContactComponent implements OnInit{
   subject = "";
   message = "";
 
-  constructor (private formBuilder: FormBuilder, private httpService: HttpService) {}
+  constructor (private formBuilder: FormBuilder, private httpService: HttpService, private router: Router, private toastr: ToastrService,
+    private zone: NgZone) {}
 
   ngOnInit(): void {
     
-    AOS.init();
+    this.name = "";
+    this.email = "";
+    this.subject = "";
+    this. message = "";
 
     this.contactForm = this.formBuilder.group({
       name: ["", Validators.required],
@@ -40,14 +45,21 @@ export class ContactComponent implements OnInit{
       email: this.email
     }
 
-    this.httpService.sendEmail('http://localhost:3000/sendmail', user).subscribe(
-      data => {
-        let res: any = data;
-        console.log(`Email erfolgreich an ${user.email} gesendet`);
-      }, err => {
-        console.log(err);
-      }
-    );
-  }
-
+    this.router.navigateByUrl('loading');
+    
+    this.httpService.sendEmail('http://localhost:3000/sendmail', user)
+      .subscribe(
+      {
+        next: () => {
+          this.router.navigateByUrl('kontakt');
+          console.log(`Email erfolgreich an ${user.email} gesendet`);
+          this.toastr.success('Wir werden uns umgehend bei Ihnen melden!', 'Danke für Ihre Anfrage', { positionClass: 'toast-bottom-right' } );
+        },
+        error: (err) => {
+          this.router.navigateByUrl('kontakt');
+          console.log(err);
+          this.toastr.error('Versuche es noch einmal oder wende dich telefonisch an uns!', 'Fehler beim Senden', { positionClass: 'toast-bottom-right' });
+        }
+      });
+    }
 }

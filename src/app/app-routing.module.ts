@@ -8,6 +8,7 @@ import { PartnerOverviewComponent } from './components/partner-overview/partner-
 import { HistorieComponent } from './components/historie/historie.component';
 import { KarriereComponent } from './components/karriere/karriere.component';
 import { scrollGuard } from './services/scroll.guard';
+import { LoadingIndicatorComponent } from './components/loading-indicator/loading-indicator.component';
 
 const routes: Routes = [
   {path: "", component: WelcomeComponent},
@@ -18,6 +19,7 @@ const routes: Routes = [
   {path: "partner", component: PartnerOverviewComponent, canActivate: [scrollGuard]},
   {path: "historie", component: HistorieComponent, canActivate: [scrollGuard]},
   {path: "karriere", component: KarriereComponent, canActivate: [scrollGuard]},
+  {path: "loading", component: LoadingIndicatorComponent, canActivate: [scrollGuard]}
 ];
 
 @NgModule({

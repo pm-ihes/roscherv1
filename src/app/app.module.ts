@@ -25,6 +25,8 @@ import { HistorieComponent } from './components/historie/historie.component';
 import { KarriereComponent } from './components/karriere/karriere.component';
 import { HistoryElementComponent } from './components/historie/history-element/history-element.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ToastrModule } from 'ngx-toastr';
+import { LoadingIndicatorComponent } from './components/loading-indicator/loading-indicator.component';
 
 
 @NgModule({
@@ -41,7 +43,8 @@ import { HttpClientModule } from '@angular/common/http';
     ServiceElementComponent,
     HistorieComponent,
     KarriereComponent,
-    HistoryElementComponent
+    HistoryElementComponent,
+    LoadingIndicatorComponent
   ],
   imports: [
     BrowserModule,
@@ -56,7 +59,8 @@ import { HttpClientModule } from '@angular/common/http';
     ReactiveFormsModule,
     MatInputModule,
     MatDividerModule,
-    HttpClientModule
+    HttpClientModule,
+    ToastrModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]

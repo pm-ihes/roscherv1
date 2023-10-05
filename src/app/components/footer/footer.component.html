@@ -1,14 +1,17 @@
 <footer class="w-full text-white bg-[var(--blue)] body-font">
-    <div class="container flex flex-col flex-wrap px-5 pt-20 pb-12 mx-auto md:items-center lg:items-start md:flex-row md:flex-no-wrap">
-        <div class="flex-shrink-0 w-40 mx-auto text-center md:mx-0 md:text-left">
+    <div class="container flex flex-col flex-wrap px-5 pt-20 pb-12 mx-auto 
+    min-[700px]:items-center min-[700px]:flex-row min-[700px]:flex-no-wrap
+    min-[1000px]:items-start">
+        <div class="flex-shrink-0 mx-auto text-center md:mx-0 md:text-left">
             <a class="flex items-center justify-center font-medium text-white title-font md:justify-start">
                 <img src="../../assets/images/roscher-gmbh-logo_white.png" alt="" class="object-fill">
             </a>
-            <p class="object-fill">Roscher GmbH</p>
         </div>
-        <div class="flex flex-wrap flex-grow mt-10 -mb-10 text-center md:pl-20 md:mt-0 md:text-left">
+
+        <div class="flex flex-wrap flex-grow mt-10 -mb-10 text-center
+        min-[700px]:pl-32 min-[700px]:mt-0 min-[700px]:text-left">
             <div class="w-full px-4 lg:w-1/4 md:w-1/2">
-                <h2 class="mb-3 text-sm font-semibold tracking-widest text-white  uppercase title-font">Firma</h2>
+                <h2 class="mb-3 text-sm font-semibold tracking-widest text-white  uppercase title-font">Unternehmen </h2>
                 <nav class="mb-10 list-none">
                     <li class="mt-3">
                         <a class="text-gray-400 cursor-pointer hover:text-gray-300" routerLink="home">Willkommen</a>
@@ -17,10 +20,10 @@
                         <a class="text-gray-400 cursor-pointer hover:text-gray-300" routerLink="historie">Historie</a>
                     </li>
                     <li class="mt-3">
-                        <a class="text-gray-400 cursor-pointer hover:text-gray-300" routerLink="karriere">Karriere</a>
+                        <a class="text-gray-400 cursor-pointer hover:text-gray-300" routerLink="partner">Partner</a>
                     </li>
                     <li class="mt-3">
-                        <a class="text-gray-400 cursor-pointer hover:text-gray-300" routerLink="partner">Partner</a>
+                        <a class="text-gray-400 cursor-pointer hover:text-gray-300" routerLink="kontakt">Kontakt</a>
                     </li>
                 </nav>
             </div>
@@ -45,6 +48,17 @@
                 </nav>
             </div>
             <div class="w-full px-4 lg:w-1/4 md:w-1/2">
+                <h2 class="mb-3 text-sm font-semibold tracking-widest text-white uppercase title-font">Karriere</h2>
+                <nav class="mb-10 list-none">
+                    <li class="mt-3">
+                        <a class="text-gray-400 cursor-pointer hover:text-gray-300" routerLink="karriere">Stellenangebote</a>
+                    </li>
+                    <li class="mt-3">
+                        <a class="text-gray-400 cursor-pointer hover:text-gray-300" routerLink="bewerbung">Bewerbungsformular</a>
+                    </li>
+                </nav>
+            </div>
+            <div class="w-full px-4 lg:w-1/4 md:w-1/2">
                 <h2 class="mb-3 text-sm font-semibold tracking-widest text-white uppercase title-font">Sonstiges
                 </h2>
                 <nav class="mb-10 list-none">
@@ -59,17 +73,16 @@
                     </li>
                 </nav>
             </div>
-            <div class="w-full px-4 lg:w-1/4 md:w-1/2">
-                <h2 class="mb-3 text-sm font-semibold tracking-widest text-white uppercase title-font">Kontakt</h2>
-                <nav class="mb-10 list-none">
-                    <li class="mt-3">
-                        <a class="text-gray-400 cursor-pointer hover:text-gray-300" routerLink="kontakt">Kontaktformular</a>
-                    </li>
-                    <li class="mt-3">
-                        <a class="text-gray-400 cursor-pointer hover:text-gray-300" routerLink="bewerbung">Bewerbungsformular</a>
-                    </li>
-                </nav>
-            </div>
         </div>
+
+        <div class="flex min-[700px]:flex-col max-[700px]:justify-center max-[700px]:mt-10">
+            <a href="" class="min-[700px]:mb-3">
+                <i class="fi fi-brands-instagram text-white p-1 text-2xl hover:text-[var(--red)]"></i>
+            </a>
+            <a href="">
+                <i class="fi fi-brands-facebook text-white p-1 text-2xl hover:text-[var(--red)]"></i>
+            </a>
+        </div>
+
     </div>
 </footer>

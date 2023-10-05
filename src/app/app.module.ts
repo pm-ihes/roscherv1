@@ -27,6 +27,7 @@ import { HistoryElementComponent } from './components/historie/history-element/h
 import { HttpClientModule } from '@angular/common/http';
 import { ToastrModule } from 'ngx-toastr';
 import { LoadingIndicatorComponent } from './components/loading-indicator/loading-indicator.component';
+import { WelcomeTopComponent } from './components/welcome/welcome-top/welcome-top.component';
 
 
 @NgModule({
@@ -44,7 +45,8 @@ import { LoadingIndicatorComponent } from './components/loading-indicator/loadin
     HistorieComponent,
     KarriereComponent,
     HistoryElementComponent,
-    LoadingIndicatorComponent
+    LoadingIndicatorComponent,
+    WelcomeTopComponent
   ],
   imports: [
     BrowserModule,

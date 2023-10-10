@@ -47,7 +47,7 @@ export class ContactComponent implements OnInit{
 
     this.router.navigateByUrl('loading');
     
-    this.httpService.sendEmail('http://localhost:3000/sendmail', user)
+    this.httpService.sendEmail('http://162.19.242.254:3000/sendmail', user)
       .subscribe(
       {
         next: () => {

@@ -21,3 +21,24 @@ a.active .link-underline{
     background-position: 50% 100%
 
 }
+
+/*
+.navbar{
+    position: absolute;
+    opacity: 0;
+    transform: translateY(-100%);
+}
+
+.navbar:hover{
+    opacity: 100;
+    transform: translateY(0);
+}
+
+.opener:hover + .navbar{
+    opacity: 100;
+    transform: translateY(0);
+}
+
+.opener:hover span{
+    transform: rotate(-180deg);
+}*/

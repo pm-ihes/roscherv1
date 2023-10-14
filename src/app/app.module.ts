@@ -28,6 +28,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { ToastrModule } from 'ngx-toastr';
 import { LoadingIndicatorComponent } from './components/loading-indicator/loading-indicator.component';
 import { WelcomeTopComponent } from './components/welcome/welcome-top/welcome-top.component';
+import { ServiceOverviewV2Component } from './components/welcome/service-overview-v2/service-overview-v2.component';
+import { BenefitsMainComponent } from './components/welcome/benefits-main/benefits-main.component';
+import { CustomerStatsComponent } from './components/welcome/customer-stats/customer-stats.component';
 
 
 @NgModule({
@@ -46,7 +49,10 @@ import { WelcomeTopComponent } from './components/welcome/welcome-top/welcome-to
     KarriereComponent,
     HistoryElementComponent,
     LoadingIndicatorComponent,
-    WelcomeTopComponent
+    WelcomeTopComponent,
+    ServiceOverviewV2Component,
+    BenefitsMainComponent,
+    CustomerStatsComponent
   ],
   imports: [
     BrowserModule,

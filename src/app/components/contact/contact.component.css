@@ -22,7 +22,7 @@
 }
 
 .input-group_input:focus, .input-group_textarea:focus{
-    outline-color: var(--blue); 
+    outline-color: var(--accent); 
 }
 
 .input-group_label{
@@ -34,6 +34,7 @@
     transition: translate 500ms, scale 500ms;
 }
 
+/*Label ändern auf Fokus und oben lassen wenn etwas drin steht*/
 .input-group_input:focus + .input-group_label,
 .input-group_input:valid + .input-group_label,
 .input-group_textarea:focus + .input-group_label,
@@ -42,5 +43,17 @@
     padding-inline: 5px;
     translate: 10px -14px;
     scale: 0.8;
-    background-color: rgb(209, 213, 219) !important;
+    background-color: var(--bg) !important;
+}
+
+/*Label accent auf Foukus*/
+.input-group_input:focus + .input-group_label,
+.input-group_textarea:focus + .input-group_label{
+    color: var(--accent);
+}
+
+/*Label rot, wenn invalid*/
+.input-group_input.invalid + .input-group_label,
+.input-group_textarea.invalid + .input-group_label {
+    color: var(--red);
 }

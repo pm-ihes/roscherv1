@@ -43,3 +43,31 @@ body {
     background-position: 0 0,16px 16px;
 }
 
+.text{
+    font-size: 1.5rem;
+}
+
+.heading{
+    font-weight: 700;
+    font-size: 2.75rem;
+}
+
+@media (max-width: 1500px){
+    .text{
+        font-size: 1.25rem;
+    }
+
+    .heading{
+        font-size: 2.25rem;
+    }
+}
+
+@media (max-width: 700px) {
+    .text{
+        font-size: 1rem;
+    }
+    .heading{
+        font-size: 2rem;
+    }
+}
+

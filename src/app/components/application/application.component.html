@@ -1,7 +1,7 @@
-<div class="w-full m-auto py-5 px-1 bg-gray-100
-min-[700px]:px-6 min-[1000px]:flex">
+<div class="w-full m-auto py-5 px-1 bg-white
+min-[700px]:px-6 min-[1000px]:flex min-[1500px]:px-20">
 
-    <div class="animate__animated animate__fadeInLeft px-4 mx-2 pt-10 rounded-xl bg-gray-300 shadow-xl shadow-gray-500
+    <div class="animate__animated animate__fadeInLeft px-4 mx-2 pt-10
     min-[1000px]:w-1/3 min-[1000px]:mx-5 max-[700px]:mb-6">
         <h2 class="font-bold text-[var(--blue)] text-4xl">Bewerben Sie sich ganz einfach online!</h2>
         <div class="py-6">
@@ -23,83 +23,78 @@ min-[700px]:px-6 min-[1000px]:flex">
         </div>
     </div>
 
-    <div class="animate__animated animate__fadeInRight pt-10 mx-2 bg-gray-300 rounded-xl shadow-xl shadow-gray-500
+    <div class="animate__animated animate__fadeInRight mx-2 flex pt-10
     min-[1000px]:w-2/3 min-[1000px]:mx-5">
-        <form class="min-w-[200px] max-w-[1000px] w-full m-auto h-fullblock
-                        sm:p-4 rounded-md" 
+        <form class="min-w-[200px] max-w-[1000px] w-full m-auto h-full block rounded-md" 
                         [formGroup]="applicationForm" (ngSubmit)="sendMail()">
 
+            <!--Reihe1-->
             <div class="min-[1000px]:flex min-[1000px]:justify-center">
-                <div class="flex justify-center w-[90%] max-[1000px]:m-auto min-[1000px]:w-[45%] min-[1000px]:pr-2">
-                    <mat-form-field class="example-full-width w-full m-auto mb-3">
-                        <mat-icon matIconPrefix>person</mat-icon>
-                        <mat-label class="">Vorname</mat-label>
-                        <input class="text-[var(--secondary-color)]" type="text" matInput formControlName="firstname" [(ngModel)]="firstname">
-                        <mat-error *ngIf="applicationForm.controls['firstname'].hasError('required')">
-                            Vorname wird benötigt!
-                        </mat-error>
-                    </mat-form-field>
+                <!--Vorname-->
+                <div class="flex justify-center w-[90%] max-[1000px]:m-auto min-[1000px]:w-[45%]">
+                    <div class="input-group w-full min-[700px]:mr-2">
+                        <input type="text" id="firstname" formControlName="firstname" [(ngModel)]="firstname" class="input-group_input w-full mb-5" required
+                            [class.invalid]="applicationForm.controls['firstname'].hasError('required') && applicationForm.controls['firstname'].touched">
+                        <label for="firsname" class="input-group_label">Vorname:</label>
+                        <p></p>
+                    </div>
                 </div>
 
-                <div class="flex justify-center w-[90%] max-[1000px]:m-auto min-[1000px]:w-[45%] min-[1000px]:pl-2">
-                    <mat-form-field class="example-full-width w-full m-auto mb-3">
-                        <mat-icon matIconPrefix>group</mat-icon>
-                        <mat-label class="">Nachname</mat-label>
-                        <input class="" type="text" matInput formControlName="lastname" [(ngModel)]="lastname">
-                        <mat-error *ngIf="applicationForm.controls['lastname'].hasError('required')">
-                            Nachname wird benötigt!
-                        </mat-error>
-                    </mat-form-field>
+                <!--Nachname-->
+                <div class="flex justify-center w-[90%] max-[1000px]:m-auto min-[1000px]:w-[45%]">
+                    <div class="input-group w-full min-[700px]:ml-2">
+                        <input type="text" id="firstname" formControlName="lastname" [(ngModel)]="lastname" class="input-group_input w-full mb-5" required
+                            [class.invalid]="applicationForm.controls['lastname'].hasError('required') && applicationForm.controls['lastname'].touched">
+                        <label for="lastname" class="input-group_label">Nachname:</label>
+                        <p></p>
+                    </div>
                 </div>
             </div>
             
+            <!--Reihe2-->
             <div class="min-[1000px]:flex min-[1000px]:justify-center">
-                <div class="flex justify-center w-[90%] max-[1000px]:m-auto min-[1000px]:w-[45%] min-[1000px]:pr-2">
-                    <mat-form-field class="example-full-width w-full m-auto mb-3">
-                        <mat-icon matIconPrefix>cake</mat-icon>
-                        <mat-label class="">Geburtstag</mat-label>
-                        <input class="text-[var(--secondary-color)]" type="text" matInput formControlName="birthday" [(ngModel)]="birthday">
-                        <mat-error *ngIf="applicationForm.controls['birthday'].hasError('required')">
-                            Geburtstag wird benötigt!
-                        </mat-error>
-                    </mat-form-field>
+                <!--Geburtstag-->
+                <div class="flex justify-center w-[90%] max-[1000px]:m-auto min-[1000px]:w-[45%]">
+                    <div class="input-group w-full min-[700px]:mr-2">
+                        <input type="text" id="birthday" formControlName="birthday" [(ngModel)]="birthday" class="input-group_input w-full mb-5" required
+                            [class.invalid]="applicationForm.controls['birthday'].hasError('required') && applicationForm.controls['birthday'].touched">
+                        <label for="birthday" class="input-group_label">Geburtstag:</label>
+                        <p></p>
+                    </div>
                 </div>
 
-                <div class="flex justify-center w-[90%] max-[1000px]:m-auto min-[1000px]:w-[45%] min-[1000px]:pl-2">
-                    <mat-form-field class="example-full-width w-full m-auto mb-3">
-                        <mat-icon matIconPrefix>mail</mat-icon>
-                        <mat-label class="">Email</mat-label>
-                        <input class="" type="email" matInput formControlName="email" [(ngModel)]="email">
-                        <mat-error *ngIf="applicationForm.controls['email'].hasError('email') && !applicationForm.controls['email'].hasError('required')">
-                            Bitte geben Sie eine gültige Email ein!
-                        </mat-error>
-                        <mat-error *ngIf="applicationForm.controls['email'].hasError('required')">
-                            Email wird benötigt!
-                        </mat-error>
-                    </mat-form-field>
+                <!--Email-->
+                <div class="flex justify-center w-[90%] max-[1000px]:m-auto min-[1000px]:w-[45%]">
+                    <div class="input-group w-full min-[700px]:ml-2">
+                        <input type="email" id="email" formControlName="email" [(ngModel)]="email" class="input-group_input w-full mb-5" required
+                            [class.invalid]="(applicationForm.controls['email'].hasError('required') || applicationForm.controls['email'].hasError('email')) && applicationForm.controls['email'].touched">
+                        <label for="email" class="input-group_label"
+                            [class.email-has-input]="!applicationForm.controls['email'].hasError('required')">Email:</label>
+                        <p></p>
+                    </div>
                 </div>
             </div>
 
-
+            <!--Reihe3-->
+            <!--Stelle-->
             <div class="flex justify-center w-[90%] m-auto">
-                <mat-form-field class="w-full m-auto mb-3">
-                    <mat-icon matIconPrefix>work</mat-icon>
-                    <mat-label class="">Stelle</mat-label>
-                    <input class="text-[var(--secondary-color)]" type="text" matInput formControlName="job" [(ngModel)]="job">
-                    <mat-error *ngIf="applicationForm.controls['job'].hasError('required')">
-                        Stelle, auf die Sie sich bewerben, wird benötigt!
-                    </mat-error>
-                </mat-form-field>
+                <div class="input-group w-full">
+                    <input type="text" id="job" formControlName="job" [(ngModel)]="job" class="input-group_input w-full mb-5" required
+                        [class.invalid]="applicationForm.controls['job'].hasError('required') && applicationForm.controls['job'].touched">
+                    <label for="job" class="input-group_label">Betreff:</label>
+                    <p></p>
+                </div>
             </div>
             
+            <!--Reih4-->
+            <!--Text-->
             <div class="flex justify-center w-[90%] m-auto">
-                <mat-form-field class="w-full m-auto mb-3">
-                    <mat-label>Ihre Bewerbung</mat-label>
-                    <textarea matInput formControlName="message" [(ngModel)]="message" cdkTextareaAutosize cdkAutosizeMinRows="5" cdkAutosizeMaxRows="5"></textarea>
-                    <mat-error *ngIf="applicationForm.controls['message'].hasError('required')">
-                        Eine Bewerbungsnachricht wird benötigt!
-                    </mat-error>
-                </mat-form-field>
+                <div class="input-group w-full">
+                    <textarea id="message" formControlName="message" [(ngModel)]="message" class="input-group_textarea w-full mb-5" rows="8" required
+                        [class.invalid]="applicationForm.controls['message'].hasError('required') && applicationForm.controls['message'].touched"></textarea>
+                    <label for="message" class="input-group_label">Nachricht:</label>
+                    <p></p>
+                </div>
             </div>
 
 

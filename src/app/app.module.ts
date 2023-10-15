@@ -31,6 +31,7 @@ import { WelcomeTopComponent } from './components/welcome/welcome-top/welcome-to
 import { ServiceOverviewV2Component } from './components/welcome/service-overview-v2/service-overview-v2.component';
 import { BenefitsMainComponent } from './components/welcome/benefits-main/benefits-main.component';
 import { CustomerStatsComponent } from './components/welcome/customer-stats/customer-stats.component';
+import { ServiceItemV2Component } from './components/welcome/service-overview-v2/service-item-v2/service-item-v2.component';
 
 
 @NgModule({
@@ -52,7 +53,8 @@ import { CustomerStatsComponent } from './components/welcome/customer-stats/cust
     WelcomeTopComponent,
     ServiceOverviewV2Component,
     BenefitsMainComponent,
-    CustomerStatsComponent
+    CustomerStatsComponent,
+    ServiceItemV2Component
   ],
   imports: [
     BrowserModule,

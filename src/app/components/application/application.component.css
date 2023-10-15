@@ -1,0 +1,63 @@
+.input-group {
+    position: relative;
+}
+
+.input-group_input, .input-group_textarea {
+    font: inherit;
+    color: var(--blue);
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    outline: 2px solid var(--blue);
+    background-color: transparent !important;
+    transition: outline-color 500ms;
+}
+
+.input-group_textarea {
+    resize: none;
+}
+
+.input-group_input.invalid, .input-group_textarea.invalid{
+    outline-color: var(--red);
+}
+
+.input-group_input:focus, .input-group_textarea:focus{
+    outline-color: var(--accent); 
+}
+
+.input-group_label{
+    position: absolute;
+    top: 0;
+    left: 0;
+    translate: 10px 10px;
+    color: var(--blue);
+    transition: translate 500ms, scale 500ms;
+}
+
+/*Label ändern auf Fokus und oben lassen wenn etwas drin steht*/
+.input-group_input:focus + .input-group_label,
+.input-group_input:valid + .input-group_label,
+.input-group_textarea:focus + .input-group_label,
+.input-group_textarea:valid + .input-group_label,
+.email-has-input{
+    padding-inline: 5px;
+    translate: 10px -14px;
+    scale: 0.8;
+    background-color: var(--bg) !important;
+}
+
+/*Label rot, wenn invalid*/
+.input-group_input.invalid + .input-group_label,
+.input-group_textarea.invalid + .input-group_label {
+    color: var(--red);
+}
+
+/*Label accent auf Foukus*/
+.input-group_input:focus + .input-group_label,
+.input-group_textarea:focus + .input-group_label{
+    color: var(--accent);
+}
+
+
+
+

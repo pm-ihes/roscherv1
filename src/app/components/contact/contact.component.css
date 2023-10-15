@@ -46,14 +46,16 @@
     background-color: var(--bg) !important;
 }
 
+/*Label rot, wenn invalid*/
+.input-group_input.invalid + .input-group_label,
+.input-group_textarea.invalid + .input-group_label {
+    color: var(--red);
+}
+
 /*Label accent auf Foukus*/
 .input-group_input:focus + .input-group_label,
 .input-group_textarea:focus + .input-group_label{
     color: var(--accent);
 }
 
-/*Label rot, wenn invalid*/
-.input-group_input.invalid + .input-group_label,
-.input-group_textarea.invalid + .input-group_label {
-    color: var(--red);
-}
+

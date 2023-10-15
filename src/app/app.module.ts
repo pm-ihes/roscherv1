@@ -14,6 +14,7 @@ import {MatMenuModule} from '@angular/material/menu';
 import {MatIconModule} from '@angular/material/icon';
 import { ApplicationComponent } from './components/application/application.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { GoogleMapsModule } from '@angular/google-maps'
 import {MatInputModule} from '@angular/material/input';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { ServiceOverviewComponent } from './components/service-overview/service-overview.component';
@@ -32,6 +33,10 @@ import { ServiceOverviewV2Component } from './components/welcome/service-overvie
 import { BenefitsMainComponent } from './components/welcome/benefits-main/benefits-main.component';
 import { CustomerStatsComponent } from './components/welcome/customer-stats/customer-stats.component';
 import { ServiceItemV2Component } from './components/welcome/service-overview-v2/service-item-v2/service-item-v2.component';
+import { PromoApplicationComponent } from './components/welcome/promo-application/promo-application.component';
+import { AboutApplicationComponent } from './components/welcome/about-application/about-application.component';
+import { JobOfferComponent } from './components/welcome/job-offer/job-offer.component';
+import { LocationComponent } from './components/welcome/location/location.component';
 
 
 @NgModule({
@@ -54,7 +59,11 @@ import { ServiceItemV2Component } from './components/welcome/service-overview-v2
     ServiceOverviewV2Component,
     BenefitsMainComponent,
     CustomerStatsComponent,
-    ServiceItemV2Component
+    ServiceItemV2Component,
+    PromoApplicationComponent,
+    AboutApplicationComponent,
+    JobOfferComponent,
+    LocationComponent
   ],
   imports: [
     BrowserModule,
@@ -71,6 +80,7 @@ import { ServiceItemV2Component } from './components/welcome/service-overview-v2
     MatDividerModule,
     HttpClientModule,
     ToastrModule.forRoot(),
+    GoogleMapsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

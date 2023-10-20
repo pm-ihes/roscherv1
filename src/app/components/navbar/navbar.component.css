@@ -42,3 +42,30 @@ a.active .link-underline{
 .opener:hover span{
     transform: rotate(-180deg);
 }*/
+
+.home-item, .service-item, .unternehmen-item{
+    position: relative;
+    cursor: pointer;
+}
+
+.home-menu, .service-menu, .unternehmen-menu{
+    cursor: pointer;
+    display: none;
+    position: absolute;
+    padding: 30px 0 10px 0;
+    width: 120%;
+    top: 100%;
+    left: -10%;
+    background-color: var(--blue);
+    transition: ease-in 500ms;
+    color: #fff;
+    font-size: 0.9rem;
+}
+
+.home-menu li:hover, .service-menu li:hover, .unternehmen-menu li:hover{
+    color: var(--red);
+}
+
+.home-item:hover .home-menu, .service-item:hover .service-menu, .unternehmen-item:hover .unternehmen-menu{
+    display: block;
+}

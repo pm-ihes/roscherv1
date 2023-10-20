@@ -1,76 +1,85 @@
 
-<!--
-<div class="opener absolute z-10 top-2 left-1/2 -translate-x-1/2">
-  <span class="material-symbols-outlined text-5xl text-[var(--red)] ease-in duration-200">keyboard_arrow_down</span>
-</div>-->
 
 <div class="navbar relative w-screen h-20 bg-[var(--blue)] shadow-md z-10 ease-in duration-300">
 
     <div class="z-20 flex w-full h-full justify-between align-middle items-center 
-    min-[801px]:px-2 min-[1050px]:px-4 
-    max-[800px]:absolute bg-[var(--blue)]">
+    sm:px-2 md:px-4 
+    -sm:absolute bg-[var(--blue)]">
 
       <div class="h-full flex
-      min-[1050px]:w-1/4">
+      md:w-1/4">
         <a routerLink="welcome">
           <img src="../assets/images/roscher-gmbh-logo_red.png" alt="" class="h-full p-3">
         </a>
         <div class="flex items-center
-        max-[800px]:flex
-        max-[1100px]:hidden">
-          <h2 class="font-bold text-3xl text-[var(--red)]">Roscher GmbH</h2>
+        -sm:flex
+        -md:hidden">
+          <h2 class="font-bold text-3xl text-white">Roscher GmbH</h2>
         </div>
       </div>
   
       <div class="justify-start flex text-center
-          min-[1050px]:justify-center min-[1050px]:w-1/2
-          max-[800px]:hidden">
+          md:justify-center md:w-1/2 md:ml-10
+          -sm:hidden">
         <div class="px-3">
-          <a class="font-semibold text-lg p-" routerLink="home" routerLinkActive="active">
-            <span class="link link-underline text-white">Willkommen</span>
-          </a>
+          <li class="home-item font-semibold text-lg list-none" routerLink="home" routerLinkActive="active">
+            <span class="link link-underline text-white">Willkommen<span class="material-symbols-outlined align-middle">stat_minus_1</span></span>
+            <ul class="home-menu">
+              <li>Unsere Lösungen</li>
+              <li>Vorteile</li>
+              <li>Über uns</li>
+              <li>Standort</li>
+            </ul>
+          </li>
         </div>
         <div class="px-3">
-          <a class="font-semibold text-lg p-" routerLink="leistungen" routerLinkActive="active">
-            <span class="link link-underline text-white">Leistungen</span>
-          </a>
+          <li class="service-item font-semibold text-lg list-none" routerLink="leistungen" routerLinkActive="active">
+            <span class="link link-underline text-white">Leistungen<span class="material-symbols-outlined align-middle">stat_minus_1</span></span>
+            <ul class="service-menu">
+              <li>Heizung</li>
+              <li>Sanitär</li>
+              <li>Klima</li>
+              <li>Lüftung</li>
+              <li>Im Havariefall</li>
+            </ul>
+          </li>
         </div>
         <div class="px-3">
-          <a class="font-semibold text-lg p-" routerLink="historie" routerLinkActive="active">
-            <span class="link link-underline text-white">Historie</span>
-          </a>
+          <li class="unternehmen-item font-semibold text-lg list-none" routerLink="Unternehmen" routerLinkActive="active">
+            <span class="link link-underline text-white">Unternehmen<span class="material-symbols-outlined align-middle">stat_minus_1</span></span>
+            <ul class="unternehmen-menu">
+              <li>Historie</li>
+              <li>Partner</li>
+            </ul>
+          </li>
         </div>
         <div class="px-3">
-          <a class="font-semibold text-lg p-" routerLink="partner" routerLinkActive="active">
-            <span class="link link-underline text-white">Partner</span>
-          </a>
+          <li class="font-semibold text-lg list-none" routerLink="karriere" routerLinkActive="active">
+            <span class="link link-underline text-white">Karriere</span>
+          </li>
         </div>
       </div>
-      <div class="flex justify-end pr-4 min-[1050px]:w-1/4 max-[800px]:hidden">
+      <div class="flex justify-end pr-4 md:w-[10%] -sm:hidden">
         <button class="group mx-2 relative p-1 overflow-hidden rounded-2xl bg-[var(--red)] text-lg font-bold text-white" routerLink="kontakt">
           Kontakt
           <div class="absolute inset-0 h-full w-full scale-0 rounded-2xl transition-all duration-300 group-hover:scale-100 group-hover:bg-white/30"></div>
         </button>
-        <button class="group mx-2 relative p-1 overflow-hidden rounded-2xl bg-[var(--red)] text-lg font-bold text-white" routerLink="karriere">
-          Karriere
-          <div class="absolute inset-0 h-full w-full scale-0 rounded-2xl transition-all duration-300 group-hover:scale-100 group-hover:bg-white/30"></div>
-        </button>
       </div>
   
-      <div class="pr-4 pt-7 absolute top-0 right-0 min-[801px]:hidden" *ngIf="menuToggled">
+      <div class="pr-4 pt-7 absolute top-0 right-0 sm:hidden" *ngIf="menuToggled">
         <button class="" (click)="menuOpenToggle()">
           <i class="fi fi-br-menu-burger text-white text-2xl"></i>
         </button>
       </div>
 
-      <div class="pr-4 pt-7 absolute top-0 right-0 min-[801px]:hidden" *ngIf="!menuToggled">
+      <div class="pr-4 pt-7 absolute top-0 right-0 sm:hidden" *ngIf="!menuToggled">
         <button class="" (click)="menuOpenToggle()">
           <i class="fi fi-br-cross text-white text-2xl"></i>
         </button>
       </div>
     </div>
 
-    <div id="menu" class="absolute top-[-220px] w-full py-2 block bg-[var(--blue)] z-10 transition-all duration-500 min-[800px]:hidden">
+    <div id="menu" class="absolute top-[-220px] w-full py-2 block bg-[var(--blue)] z-10 transition-all duration-500 sm:hidden">
         <div class="w-full py-1 text-center">
             <a class="text-white text-xl" routerLink="home">Willkommen</a>
         </div>
@@ -85,9 +94,6 @@
       </div>
         <div class="w-full py-1 text-center">
             <a class="text-[var(--red)] text-xl font-semibold uppercase" routerLink="kontakt">Kontakt</a>
-        </div>
-        <div class="w-full py-1 text-center">
-            <a class="text-[var(--red)] text-xl font-semibold uppercase" routerLink="bewerbung">Bewerbung</a>
         </div>
     </div>
 

@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { ExtraOptions, RouterModule, Routes } from '@angular/router';
 import { WelcomeComponent } from './components/welcome/welcome.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { ApplicationComponent } from './components/application/application.component';
@@ -11,7 +11,7 @@ import { scrollGuard } from './services/scroll.guard';
 import { LoadingIndicatorComponent } from './components/loading-indicator/loading-indicator.component';
 
 const routes: Routes = [
-  {path: "", component: WelcomeComponent},
+  {path: "", redirectTo: "home", pathMatch: 'full'},
   {path: "home", component: WelcomeComponent, canActivate: [scrollGuard]},
   {path: "kontakt", component: ContactComponent, canActivate: [scrollGuard]},
   {path: "bewerbung", component: ApplicationComponent, canActivate: [scrollGuard]},
@@ -22,8 +22,14 @@ const routes: Routes = [
   {path: "loading", component: LoadingIndicatorComponent, canActivate: [scrollGuard]}
 ];
 
+const routerOptions: ExtraOptions = {
+  scrollPositionRestoration: 'disabled',
+  anchorScrolling: 'enabled',
+  scrollOffset: [0, 64]
+};
+
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, routerOptions)],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

@@ -1,77 +1,55 @@
-<div class="w-screen my-10 sm:my-20 min-[701]:flex">
+<div id="loesungen" class=" w-screen my-10 sm:my-20 sm:flex">
 
     <!--Links(Text)-->
-    <div class="w-2/5 sm:px-">
-        <div class="text-center">
+    <div class="sm:w-2/5 sm:px-8">
+        <div class="-sm:max-w-[80%] -sm:mx-auto">
             <h1 class="heading text-[var(--blue)] text-left">Ihr Projekt - <br>unsere Lösungen:</h1>
             <p class="text text-justify">Die Roscher GmbH unterstützt gewerbliche und private Kunden bei der Planung und Realiserung Ihres Projektes</p>
             <p class="text text-justify">Dabei setzen wir stets auf <span class="text-[var(--accent)]">modernste Technik</span> und <span class="text-[var(--accent)]">beste Verfahren</span>!</p>
         </div>
-        <div class="sm:max-w-sm min-[1000px]:max-w-md flex flex-col justify-end -sm:my-4 -sm:text-center -sm:w-[90vw] -sm:mx-auto">
+        <div class="-sm:max-w-[80%] -sm:mx-auto">
             <p class="text text-justify">Mehr text muss hier noch hin.. Damit es nicht so leer ausieht. </p>
             <p class="text text-justify">Wir haben uns in der Branche der Installationstechnik auf intelligente Klima- und Heizsystem spezialisert.</p>
         </div>
     </div>
 
     <!--Rechts(Cards)-->
-    <div class="w-3/5 ">
+    <div class="sm:w-3/5">
 
         <!--Card1/2-->
-        <div class="sm:flex">
-
-        </div>
-
-        <!--Card3/4-->
-        <div class="sm:flex">
-
-        </div>
-    </div>
-
-    <!--Obere Section-->
-    <div class="w-full sm:flex justify-center gap-8">
-
-        <!--Text-->
-       
-
-        <!--Cards--> 
-        <app-service-item-v2
+        <div class="sm:flex justify-evenly">
+            <app-service-item-v2
             imageSrc="../../../../../assets/images/hist_1.jpg"
             title="intelligente Heizsysteme"
             text=""
-        >
-        </app-service-item-v2>
+            >
+            </app-service-item-v2>
 
 
-        <app-service-item-v2
-            imageSrc="../../../../../assets/images/hist_1.jpg"
-            title="nachhaltige Klimanalagen"
-            text=""
-        >
-        </app-service-item-v2>
+            <app-service-item-v2
+                imageSrc="../../../../../assets/images/hist_1.jpg"
+                title="nachhaltige Klimanalagen"
+                text=""
+            >
+            </app-service-item-v2>
+        </div>
 
-    </div>
 
-
-    <!--Untere Section-->
-    <div class="w-full sm:flex justify-center gap-8 sm:mt-8">
-
-        <!--Cards-->
-        <app-service-item-v2
+        <!--Card3/4-->
+        <div class="sm:flex justify-evenly sm:pt-8 sm:-translate-x-10">
+            <app-service-item-v2
             imageSrc="../../../../../assets/images/hist_1.jpg"
             title="moderne Sanitär?"
             text=""
-        >
-        </app-service-item-v2>
+            >
+            </app-service-item-v2>
 
-        <app-service-item-v2
-            imageSrc="../../../../../assets/images/hist_1.jpg"
-            title="gesundheitsfördernde Lüftungsanlagen"
-            text=""
-        >
-        </app-service-item-v2>
-
-        <!--Text-->
-        
+            <app-service-item-v2
+                imageSrc="../../../../../assets/images/hist_1.jpg"
+                title="Lüftungsanlagen"
+                text=""
+            >
+            </app-service-item-v2>
+        </div>
     </div>
-
 </div>

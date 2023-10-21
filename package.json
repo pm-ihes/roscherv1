@@ -26,6 +26,7 @@
     "@yoozly/ngx-parallax": "^16.0.0",
     "animate.css": "^4.1.1",
     "aos": "^2.3.4",
+    "gsap": "^3.12.2",
     "ngx-toaster": "^1.0.1",
     "ngx-toastr": "^17.0.2",
     "rxjs": "~7.8.0",

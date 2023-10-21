@@ -3,11 +3,11 @@ import { Swiper } from 'swiper';
 import { Navigation, Pagination, EffectCoverflow } from 'swiper/modules';
 
 @Component({
-  selector: 'app-benefits-main',
-  templateUrl: './benefits-main.component.html',
-  styleUrls: ['./benefits-main.component.css']
+  selector: 'app-welcome-benefits-main',
+  templateUrl: './welcome-benefits-main.component.html',
+  styleUrls: ['./welcome-benefits-main.component.css']
 })
-export class BenefitsMainComponent implements OnInit{
+export class WelcomeBenefitsMainComponent implements OnInit{
 
   ngOnInit(){
 

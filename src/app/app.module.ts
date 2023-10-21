@@ -29,15 +29,17 @@ import { HttpClientModule } from '@angular/common/http';
 import { ToastrModule } from 'ngx-toastr';
 import { LoadingIndicatorComponent } from './components/loading-indicator/loading-indicator.component';
 import { WelcomeTopComponent } from './components/welcome/welcome-top/welcome-top.component';
-import { ServiceOverviewV2Component } from './components/welcome/service-overview-v2/service-overview-v2.component';
-import { BenefitsMainComponent } from './components/welcome/benefits-main/benefits-main.component';
-import { CustomerStatsComponent } from './components/welcome/customer-stats/customer-stats.component';
-import { ServiceItemV2Component } from './components/welcome/service-overview-v2/service-item-v2/service-item-v2.component';
-import { PromoApplicationComponent } from './components/welcome/promo-application/promo-application.component';
-import { AboutApplicationComponent } from './components/welcome/about-application/about-application.component';
-import { JobOfferComponent } from './components/welcome/job-offer/job-offer.component';
-import { LocationComponent } from './components/welcome/location/location.component';
+import { WelcomeServiceOverviewComponent } from './components/welcome/welcome-service-overview/welcome-service-overview.component';
+import { WelcomeBenefitsMainComponent } from './components/welcome/welcome-benefits-main/welcome-benefits-main.component';
+import { WelcomeCustomerStatsComponent } from './components/welcome/welcome-customer-stats/welcome-customer-stats.component';
+import { ServiceItemV2Component } from './components/welcome/welcome-service-overview/service-item-v2/service-item-v2.component';
+import { WelcomePromoApplicationComponent } from './components/welcome/welcome-promo-application/welcome-promo-application.component';
+import { WelcomeAboutApplicationComponent } from './components/welcome/welcome-about-application/welcome-about-application.component';
+import { WelcomeJobOfferComponent } from './components/welcome/welcome-job-offer/welcome-job-offer.component';
+import { WelcomeLocationComponent } from './components/welcome/welcome-location/welcome-location.component';
 import { KarriereTopComponent } from './components/karriere/karriere-top/karriere-top.component';
+import { KarriereAboutComponent } from './components/karriere/karriere-about/karriere-about.component';
+import { KarriereErwartetComponent } from './components/karriere/karriere-erwartet/karriere-erwartet.component';
 
 
 @NgModule({
@@ -57,15 +59,17 @@ import { KarriereTopComponent } from './components/karriere/karriere-top/karrier
     HistoryElementComponent,
     LoadingIndicatorComponent,
     WelcomeTopComponent,
-    ServiceOverviewV2Component,
-    BenefitsMainComponent,
-    CustomerStatsComponent,
+    WelcomeServiceOverviewComponent,
+    WelcomeBenefitsMainComponent,
+    WelcomeCustomerStatsComponent,
     ServiceItemV2Component,
-    PromoApplicationComponent,
-    AboutApplicationComponent,
-    JobOfferComponent,
-    LocationComponent,
-    KarriereTopComponent
+    WelcomePromoApplicationComponent,
+    WelcomeAboutApplicationComponent,
+    WelcomeJobOfferComponent,
+    WelcomeLocationComponent,
+    KarriereTopComponent,
+    KarriereAboutComponent,
+    KarriereErwartetComponent
   ],
   imports: [
     BrowserModule,

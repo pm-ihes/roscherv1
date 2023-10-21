@@ -14,8 +14,6 @@ export class WelcomeTopComponent implements OnInit{
     
     this.initGsap();
 
-    console.log('jetzt');
-
   }
 
   initGsap(){

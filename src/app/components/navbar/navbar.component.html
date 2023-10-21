@@ -7,20 +7,20 @@
     -sm:absolute bg-[var(--blue)]">
 
       <div class="h-full flex
-      md:w-1/4">
+      md:w-fit">
         <a routerLink="welcome">
           <img src="../assets/images/roscher-gmbh-logo_red.png" alt="" class="h-full p-3">
         </a>
         <div class="flex items-center
         -sm:flex
-        -md:hidden">
+        nav_md:hidden">
           <h2 class="font-bold text-3xl text-white">Roscher GmbH</h2>
         </div>
       </div>
   
       <div class="justify-start flex text-center
-          md:justify-center md:w-1/2 md:ml-10
-          -sm:hidden">
+          md:justify-center md:w-max md:ml-10
+          nav_sm:hidden">
         <div class="px-3">
           <li class="home-item font-semibold text-lg list-none" routerLink="home" routerLinkActive="active">
             <span class="link link-underline text-white">Willkommen<span class="material-symbols-outlined align-middle">stat_minus_1</span></span>
@@ -59,27 +59,27 @@
           </li>
         </div>
       </div>
-      <div class="flex justify-end pr-4 md:w-[10%] -sm:hidden">
+      <div class="flex justify-end pr-4 md:w-[10%] nav_sm:hidden">
         <button class="group mx-2 relative p-1 overflow-hidden rounded-2xl bg-[var(--red)] text-lg font-bold text-white" routerLink="kontakt">
           Kontakt
           <div class="absolute inset-0 h-full w-full scale-0 rounded-2xl transition-all duration-300 group-hover:scale-100 group-hover:bg-white/30"></div>
         </button>
       </div>
   
-      <div class="pr-4 pt-7 absolute top-0 right-0 sm:hidden" *ngIf="menuToggled">
+      <div class="pr-4 pt-7 absolute top-0 right-0 hidden nav_sm:block" *ngIf="menuToggled">
         <button class="" (click)="menuOpenToggle()">
           <i class="fi fi-br-menu-burger text-white text-2xl"></i>
         </button>
       </div>
 
-      <div class="pr-4 pt-7 absolute top-0 right-0 sm:hidden" *ngIf="!menuToggled">
+      <div class="pr-4 pt-7 absolute top-0 right-0 hidden nav_sm:block" *ngIf="!menuToggled">
         <button class="" (click)="menuOpenToggle()">
           <i class="fi fi-br-cross text-white text-2xl"></i>
         </button>
       </div>
     </div>
 
-    <div id="menu" class="absolute top-[-220px] w-full py-2 block bg-[var(--blue)] z-10 transition-all duration-500 sm:hidden">
+    <div id="menu" class="absolute top-[-220px] w-full py-2 bg-[var(--blue)] z-10 transition-all duration-500 hidden nav_sm:block">
         <div class="w-full py-1 text-center">
             <a class="text-white text-xl" routerLink="home">Willkommen</a>
         </div>

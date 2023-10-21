@@ -25,7 +25,6 @@ const routes: Routes = [
 const routerOptions: ExtraOptions = {
   scrollPositionRestoration: 'disabled',
   anchorScrolling: 'enabled',
-  scrollOffset: [0, 64]
 };
 
 @NgModule({

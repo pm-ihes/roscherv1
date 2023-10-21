@@ -37,6 +37,7 @@ import { PromoApplicationComponent } from './components/welcome/promo-applicatio
 import { AboutApplicationComponent } from './components/welcome/about-application/about-application.component';
 import { JobOfferComponent } from './components/welcome/job-offer/job-offer.component';
 import { LocationComponent } from './components/welcome/location/location.component';
+import { KarriereTopComponent } from './components/karriere/karriere-top/karriere-top.component';
 
 
 @NgModule({
@@ -63,7 +64,8 @@ import { LocationComponent } from './components/welcome/location/location.compon
     PromoApplicationComponent,
     AboutApplicationComponent,
     JobOfferComponent,
-    LocationComponent
+    LocationComponent,
+    KarriereTopComponent
   ],
   imports: [
     BrowserModule,

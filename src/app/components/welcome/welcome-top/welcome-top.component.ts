@@ -26,7 +26,6 @@ export class WelcomeTopComponent implements OnInit{
       start: 'top 70%',
       end: 'bottom top',
       scrub: 1,
-      markers: true,
     }});
 
     tl_heading.to('.heading_welcome', {

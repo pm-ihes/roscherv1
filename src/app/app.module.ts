@@ -40,6 +40,8 @@ import { WelcomeLocationComponent } from './components/welcome/welcome-location/
 import { KarriereTopComponent } from './components/karriere/karriere-top/karriere-top.component';
 import { KarriereAboutComponent } from './components/karriere/karriere-about/karriere-about.component';
 import { KarriereErwartetComponent } from './components/karriere/karriere-erwartet/karriere-erwartet.component';
+import { ImpressumComponent } from './components/impressum/impressum.component';
+import { AgbComponent } from './components/agb/agb.component';
 
 
 @NgModule({
@@ -69,7 +71,9 @@ import { KarriereErwartetComponent } from './components/karriere/karriere-erwart
     WelcomeLocationComponent,
     KarriereTopComponent,
     KarriereAboutComponent,
-    KarriereErwartetComponent
+    KarriereErwartetComponent,
+    ImpressumComponent,
+    AgbComponent
   ],
   imports: [
     BrowserModule,

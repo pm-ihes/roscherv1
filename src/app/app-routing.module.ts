@@ -9,6 +9,8 @@ import { HistorieComponent } from './components/historie/historie.component';
 import { KarriereComponent } from './components/karriere/karriere.component';
 import { scrollGuard } from './services/scroll.guard';
 import { LoadingIndicatorComponent } from './components/loading-indicator/loading-indicator.component';
+import { ImpressumComponent } from './components/impressum/impressum.component';
+import { AgbComponent } from './components/agb/agb.component';
 
 const routes: Routes = [
   {path: "", redirectTo: "home", pathMatch: 'full'},
@@ -19,7 +21,9 @@ const routes: Routes = [
   {path: "partner", component: PartnerOverviewComponent, canActivate: [scrollGuard]},
   {path: "historie", component: HistorieComponent, canActivate: [scrollGuard]},
   {path: "karriere", component: KarriereComponent, canActivate: [scrollGuard]},
-  {path: "loading", component: LoadingIndicatorComponent, canActivate: [scrollGuard]}
+  {path: "loading", component: LoadingIndicatorComponent, canActivate: [scrollGuard]},
+  {path: "impressum", component: ImpressumComponent, canActivate: [scrollGuard]},
+  {path: "agb", component: AgbComponent, canActivate: [scrollGuard]},
 ];
 
 const routerOptions: ExtraOptions = {

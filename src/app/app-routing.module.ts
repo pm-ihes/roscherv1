@@ -11,6 +11,7 @@ import { scrollGuard } from './services/scroll.guard';
 import { LoadingIndicatorComponent } from './components/loading-indicator/loading-indicator.component';
 import { ImpressumComponent } from './components/impressum/impressum.component';
 import { AgbComponent } from './components/agb/agb.component';
+import { DatenschutzComponent } from './components/datenschutz/datenschutz.component';
 
 const routes: Routes = [
   {path: "", redirectTo: "home", pathMatch: 'full'},
@@ -24,6 +25,7 @@ const routes: Routes = [
   {path: "loading", component: LoadingIndicatorComponent, canActivate: [scrollGuard]},
   {path: "impressum", component: ImpressumComponent, canActivate: [scrollGuard]},
   {path: "agb", component: AgbComponent, canActivate: [scrollGuard]},
+  {path: "datenschutz", component: DatenschutzComponent, canActivate: [scrollGuard]},
 ];
 
 const routerOptions: ExtraOptions = {

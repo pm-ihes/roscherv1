@@ -42,6 +42,7 @@ import { KarriereAboutComponent } from './components/karriere/karriere-about/kar
 import { KarriereErwartetComponent } from './components/karriere/karriere-erwartet/karriere-erwartet.component';
 import { ImpressumComponent } from './components/impressum/impressum.component';
 import { AgbComponent } from './components/agb/agb.component';
+import { DatenschutzComponent } from './components/datenschutz/datenschutz.component';
 
 
 @NgModule({
@@ -73,7 +74,8 @@ import { AgbComponent } from './components/agb/agb.component';
     KarriereAboutComponent,
     KarriereErwartetComponent,
     ImpressumComponent,
-    AgbComponent
+    AgbComponent,
+    DatenschutzComponent
   ],
   imports: [
     BrowserModule,

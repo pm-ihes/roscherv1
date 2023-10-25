@@ -15,11 +15,9 @@ class="relative flex items-center justify-between sm:justify-normal group is-act
     </div>
 
     <!-- Card -->
-    <div class="w-[calc(100%-4rem)] sm:w-[calc(50%-2.5rem)] bg-[var(--blue)] p-4 rounded-md">
-        <div class="flex items-center justify-between space-x-2 mb-1">
-            <div class="font-bold text-[var(--red)] text-xl"> {{ title }} </div>
-        </div>
-        <div class="text-white"> {{ message }} <div>
+    <div [ngClass]="left ? 'sm:border-r-4 sm:text-right' : 'sm:border-l-4 sm:text-left' " class="w-[calc(100%-4rem)] sm:w-[calc(50%-2.5rem)] border-[var(--blue)] -sm:border-l-4 p-4 ">
+        <h2 class="font-bold text-[var(--red)] text-xl">{{ title }}</h2>
+        <div class="text-[var(--blue)]"> {{ message }} <div>
     </div>
 
     <div *ngIf="image" class="w-full mt-1 {{imageHeight}}">

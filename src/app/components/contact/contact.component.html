@@ -1,3 +1,6 @@
+<!--Platzhalter Navbar-->
+<div class="w-screen h-20"></div>
+
 <div class="w-full m-auto py-5 px-1 bg-[var(--bg)]
 sm:px-6 md:flex lg:px-20">
 
@@ -24,26 +27,28 @@ sm:px-6 md:flex lg:px-20">
     </div>
 
     <div class="animate__animated animate__fadeInRight mx-2 flex
-    sm:pt-10 md:w-2/3 md:mx-5"> 
-        <form class="min-w-[200px] max-w-[1000px] w-full m-auto h-full block rounded-md " 
-                        [formGroup]="contactForm" (ngSubmit)="sendMail()">
+    sm:pt-10 md:w-2/3 md:mx-5">
+        <form class="min-w-[200px] max-w-[1000px] w-full m-auto h-full block rounded-md " [formGroup]="contactForm"
+            (ngSubmit)="sendMail()">
 
             <!--Reihe1-->
             <div class="md:flex md:justify-center">
                 <!--Name-->
                 <div class="flex justify-center w-[90%] m-auto sm:m-0 md:w-[45%]">
                     <div class="input-group w-full sm:mr-2">
-                        <input type="text" id="name" formControlName="name" [(ngModel)]="name" class="input-group_input w-full mb-5" required
+                        <input type="text" id="name" formControlName="name" [(ngModel)]="name"
+                            class="input-group_input w-full mb-5" required
                             [class.invalid]="contactForm.controls['name'].hasError('required') && contactForm.controls['name'].touched">
                         <label for="name" class="input-group_label">Name/Firma:</label>
                         <p></p>
                     </div>
                 </div>
-    
+
                 <!--Email-->
                 <div class="flex justify-center w-[90%] m-auto sm:m-0 md:w-[45%]">
                     <div class="input-group w-full sm:ml-2">
-                        <input type="email" id="email" formControlName="email" [(ngModel)]="email" class="input-group_input w-full mb-5" required
+                        <input type="email" id="email" formControlName="email" [(ngModel)]="email"
+                            class="input-group_input w-full mb-5" required
                             [class.invalid]="(contactForm.controls['email'].hasError('required') || contactForm.controls['email'].hasError('email')) && contactForm.controls['email'].touched">
                         <label for="email" class="input-group_label"
                             [class.email-has-input]="!contactForm.controls['email'].hasError('required')">Email:</label>
@@ -51,23 +56,25 @@ sm:px-6 md:flex lg:px-20">
                     </div>
                 </div>
             </div>
-            
+
             <!--Reihe2-->
             <!--Betreff-->
             <div class="flex justify-center w-[90%] m-auto">
                 <div class="input-group w-full">
-                    <input type="text" id="subject" formControlName="subject" [(ngModel)]="subject" class="input-group_input w-full mb-5" required
+                    <input type="text" id="subject" formControlName="subject" [(ngModel)]="subject"
+                        class="input-group_input w-full mb-5" required
                         [class.invalid]="contactForm.controls['subject'].hasError('required') && contactForm.controls['subject'].touched">
                     <label for="subject" class="input-group_label">Betreff:</label>
                     <p></p>
                 </div>
             </div>
-            
+
             <!--Reihe3-->
             <!--Text-->
             <div class="flex justify-center w-[90%] m-auto">
                 <div class="input-group w-full">
-                    <textarea id="message" formControlName="message" [(ngModel)]="message" class="input-group_textarea w-full mb-5" rows="8" required
+                    <textarea id="message" formControlName="message" [(ngModel)]="message"
+                        class="input-group_textarea w-full mb-5" rows="8" required
                         [class.invalid]="contactForm.controls['message'].hasError('required') && contactForm.controls['message'].touched"></textarea>
                     <label for="message" class="input-group_label">Nachricht:</label>
                     <p></p>
@@ -76,17 +83,21 @@ sm:px-6 md:flex lg:px-20">
 
 
             <div class="flex justify-center items-center w-[90%] m-auto pb-4">
-                <input id="privacy" formControlName="privacy" aria-describedby="remember" type="checkbox" class="bg-gray-50 border-gray-300 focus:ring-3 focus:ring-blue-300 h-4 w-4 rounded" required="">
-                <label for="privacy" class="text-gray-900 pl-2">Ich bin mit der Speicherung meiner Daten zur Kontaktaufnahme einverstanden <span class="text-red-700">*</span></label>
+                <input id="privacy" formControlName="privacy" aria-describedby="remember" type="checkbox"
+                    class="bg-gray-50 border-gray-300 focus:ring-3 focus:ring-blue-300 h-4 w-4 rounded" required="">
+                <label for="privacy" class="text-gray-900 pl-2">Ich bin mit der Speicherung meiner Daten zur
+                    Kontaktaufnahme einverstanden <span class="text-red-700">*</span></label>
             </div>
-            
+
 
             <div class="block">
                 <div class="flex justify-center">
                     <button type="submit" [attr.disabled]="contactForm.valid ? null : true"
-                    class="group mx-2 relative py-1 px-4 overflow-hidden rounded-2xl bg-[var(--red)] disabled:bg-slate-500 text-sm font-bold disabled:cursor-not-allowed disabled:line-through text-white max-[700px]:mb-2">
+                        class="group mx-2 relative py-1 px-4 overflow-hidden rounded-2xl bg-[var(--red)] disabled:bg-slate-500 text-sm font-bold disabled:cursor-not-allowed disabled:line-through text-white max-[700px]:mb-2">
                         Absenden
-                        <div class="absolute inset-0 h-full w-full scale-0 rounded-2xl transition-all duration-300 group-hover:group-enabled:scale-100 group-hover:bg-white/30"></div>
+                        <div
+                            class="absolute inset-0 h-full w-full scale-0 rounded-2xl transition-all duration-300 group-hover:group-enabled:scale-100 group-hover:bg-white/30">
+                        </div>
                     </button>
                 </div>
             </div>

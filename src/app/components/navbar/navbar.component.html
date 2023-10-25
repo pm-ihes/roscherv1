@@ -1,10 +1,10 @@
 
 
-<div class="navbar relative w-screen h-20 bg-[var(--blue)] shadow-md z-10 ease-in duration-300">
+<div class="navbar absolute top-0 left-0 w-screen h-20 shadow-md z-10 ease-in duration-300">
 
-    <div class="z-20 flex w-full h-full justify-between align-middle items-center 
+    <div class="z-20 flex w-full h-full justify-between align-middle items-center bg-slate-700/50 hover:bg-slate-700/70 ease-in duration-150
     sm:px-2 md:px-4 
-    -sm:absolute bg-[var(--blue)]">
+    -sm:absolute ">
 
       <div class="h-full flex
       md:w-fit">
@@ -25,10 +25,12 @@
           <li class="home-item font-semibold text-lg list-none" routerLink="home" routerLinkActive="active">
             <span class="link link-underline text-white">Willkommen<span class="material-symbols-outlined align-middle">stat_minus_1</span></span>
             <ul class="home-menu">
-              <li [routerLink]="['/home']" fragment="loesungen">Unsere Lösungen</li>
-              <li>Vorteile</li>
-              <li>Über uns</li>
-              <li>Standort</li>
+              <div class="bg-slate-700/70 pb-2">
+                <li [routerLink]="['/home']" fragment="loesungen">Unsere Lösungen</li>
+                <li>Vorteile</li>
+                <li>Über uns</li>
+                <li>Standort</li>
+              </div>
             </ul>
           </li>
         </div>
@@ -36,11 +38,13 @@
           <li class="font-semibold text-lg list-none" routerLink="leistungen" routerLinkActive="active">
             <span class="link link-underline text-white">Leistungen<span class="material-symbols-outlined align-middle">stat_minus_1</span></span>
             <ul class="service-menu">
-              <li>Heizung</li>
-              <li>Sanitär</li>
-              <li>Klima</li>
-              <li>Lüftung</li>
-              <li>Im Havariefall</li>
+              <div class="bg-slate-700/70 pb-2">
+                <li>Heizung</li>
+                <li>Sanitär</li>
+                <li>Klima</li>
+                <li>Lüftung</li>
+                <li>Im Havariefall</li>
+              </div>
             </ul>
           </li>
         </div>
@@ -48,8 +52,10 @@
           <li class="unternehmen-item font-semibold text-lg list-none" routerLink="Unternehmen" routerLinkActive="active">
             <span class="link link-underline text-white">Unternehmen<span class="material-symbols-outlined align-middle">stat_minus_1</span></span>
             <ul class="unternehmen-menu">
-              <li>Historie</li>
-              <li>Partner</li>
+              <div class="bg-slate-700/70 pb-2">
+                <li>Historie</li>
+                <li>Partner</li>
+              </div>
             </ul>
           </li>
         </div>
@@ -79,7 +85,7 @@
       </div>
     </div>
 
-    <div id="menu" class="absolute top-[-220px] w-full py-2 bg-[var(--blue)] z-10 transition-all duration-500 hidden nav_sm:block">
+    <div id="menu" class="absolute top-[-220px] w-full py-2 bg-slate-700/50 z-10 transition-all duration-500 hidden nav_sm:block">
         <div class="w-full py-1 text-center">
             <a class="text-white text-xl" routerLink="home">Willkommen</a>
         </div>

@@ -24,14 +24,14 @@ export class KarriereTopComponent {
     //ScrollTrigger: Heading MainPage
     let tl_heading = gsap.timeline({scrollTrigger: {
       trigger: '.heading_karriere',
-      start: 'top 70%',
+      start: 'top top',
       end: 'bottom top',
       scrub: 1,
       markers: true,
     }});
 
     tl_heading.to('.heading_karriere', {
-      translateY: '-200%'
+      translateY: '-40%'
     });
 
   }

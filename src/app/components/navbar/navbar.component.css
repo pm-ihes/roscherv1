@@ -1,5 +1,7 @@
 .open{
     top: 5rem !important;
+    height: 220px !important;
+    padding: 2rem 0;
 }
 
 .link-underline {

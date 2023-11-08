@@ -2,11 +2,11 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
-  selector: 'app-application',
-  templateUrl: './application.component.html',
-  styleUrls: ['./application.component.css']
+  selector: 'app-bewerbung-form',
+  templateUrl: './bewerbung-form.component.html',
+  styleUrls: ['./bewerbung-form.component.css']
 })
-export class ApplicationComponent {
+export class BewerbungFormComponent {
 sendMail() {
 throw new Error('Method not implemented.');
 }

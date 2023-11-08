@@ -12,7 +12,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatIconModule} from '@angular/material/icon';
-import { ApplicationComponent } from './components/application/application.component';
+import { BewerbungFormComponent } from './components/bewerbung-form/bewerbung-form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { GoogleMapsModule } from '@angular/google-maps'
 import {MatInputModule} from '@angular/material/input';
@@ -52,7 +52,7 @@ import { KarriereWachsenComponent } from './components/karriere/karriere-wachsen
     FooterComponent,
     ContactComponent,
     WelcomeComponent,
-    ApplicationComponent,
+    BewerbungFormComponent,
     NavbarComponent,
     ServiceOverviewComponent,
     PartnerOverviewComponent,

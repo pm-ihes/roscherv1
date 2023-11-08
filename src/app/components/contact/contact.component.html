@@ -29,7 +29,7 @@ sm:px-6 md:flex lg:px-20">
     <div class="animate__animated animate__fadeInRight mx-2 flex
     sm:pt-10 md:w-2/3 md:mx-5">
         <form class="min-w-[200px] max-w-[1000px] w-full m-auto h-full block rounded-md " [formGroup]="contactForm"
-            (ngSubmit)="sendMail()">
+            (ngSubmit)="sendMail()" enctype="multipart/form-data">
 
             <!--Reihe1-->
             <div class="md:flex md:justify-center">
@@ -81,6 +81,7 @@ sm:px-6 md:flex lg:px-20">
                 </div>
             </div>
 
+            <input type="file" name="file" id="" (change)="handleFileInput($event)">
 
             <div class="flex justify-center items-center w-[90%] m-auto pb-4">
                 <input id="privacy" formControlName="privacy" aria-describedby="remember" type="checkbox"

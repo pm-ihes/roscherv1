@@ -10,7 +10,7 @@ export class HttpService {
 
   constructor(private http: HttpClient, private router: Router) { }
 
-  sendEmail(url: string , data: { name: string; email: string; } ) {
+  sendEmail(url: string , data: { name: string; email: string} ) {
     return this.http.post(url, data).pipe(
       catchError(this.handleError)
     );

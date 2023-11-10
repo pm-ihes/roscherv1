@@ -1,0 +1,9 @@
+<div class="w-screen py-10 sm:py-20 bg-[var(--blue)]">
+
+    <div class="mx-auto sm:px-10 pb-5 sm:pb-10 space-y-2 text-center">
+        <h1 class="heading font-bold text-white">Offene Stellen:</h1>
+    </div>
+
+    <app-karriere-stellen-element *ngFor="let stelle of stellen" [stellenData]="stelle"></app-karriere-stellen-element>
+
+</div>

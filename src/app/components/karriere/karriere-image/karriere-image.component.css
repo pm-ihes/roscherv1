@@ -1,0 +1,10 @@
+.image{
+    background-image: url(../../../../assets/images/image_karriere.jpg);
+    background-attachment: fixed;
+}
+
+@media screen and (min-width: 1000px){
+    .image{
+        background-size: 100vw;
+    }
+}

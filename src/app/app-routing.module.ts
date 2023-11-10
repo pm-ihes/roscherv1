@@ -3,7 +3,7 @@ import { ExtraOptions, RouterModule, Routes } from '@angular/router';
 import { WelcomeComponent } from './components/welcome/welcome.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { BewerbungFormComponent } from './components/bewerbung-form/bewerbung-form.component';
-import { ServiceOverviewComponent } from './components/service-overview/service-overview.component';
+import { LeistungenComponent } from './components/leistungen/leistungen.component';
 import { PartnerOverviewComponent } from './components/partner-overview/partner-overview.component';
 import { HistorieComponent } from './components/historie/historie.component';
 import { KarriereComponent } from './components/karriere/karriere.component';
@@ -18,7 +18,7 @@ const routes: Routes = [
   {path: "home", component: WelcomeComponent, canActivate: [scrollGuard]},
   {path: "kontakt", component: ContactComponent, canActivate: [scrollGuard]},
   {path: "bewerbung", component: BewerbungFormComponent, canActivate: [scrollGuard]},
-  {path: "leistungen", component: ServiceOverviewComponent, canActivate: [scrollGuard]},
+  {path: "leistungen", component: LeistungenComponent, canActivate: [scrollGuard]},
   {path: "partner", component: PartnerOverviewComponent, canActivate: [scrollGuard]},
   {path: "historie", component: HistorieComponent, canActivate: [scrollGuard]},
   {path: "karriere", component: KarriereComponent, canActivate: [scrollGuard]},

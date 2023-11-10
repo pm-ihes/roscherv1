@@ -17,11 +17,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { GoogleMapsModule } from '@angular/google-maps'
 import {MatInputModule} from '@angular/material/input';
 import { NavbarComponent } from './components/navbar/navbar.component';
-import { ServiceOverviewComponent } from './components/service-overview/service-overview.component';
+import { LeistungenComponent } from './components/leistungen/leistungen.component';
 import {MatDividerModule} from '@angular/material/divider';
 import { PartnerOverviewComponent } from './components/partner-overview/partner-overview.component';
 import { PartnerElementComponent } from './components/partner-overview/partner-element/partner-element.component';
-import { ServiceElementComponent } from './components/service-overview/service-element/service-element.component';
 import { HistorieComponent } from './components/historie/historie.component';
 import { KarriereComponent } from './components/karriere/karriere.component';
 import { HistoryElementComponent } from './components/historie/history-element/history-element.component';
@@ -43,7 +42,9 @@ import { KarriereErwartetComponent } from './components/karriere/karriere-erwart
 import { ImpressumComponent } from './components/impressum/impressum.component';
 import { AgbComponent } from './components/agb/agb.component';
 import { DatenschutzComponent } from './components/datenschutz/datenschutz.component';
-import { KarriereWachsenComponent } from './components/karriere/karriere-wachsen/karriere-wachsen.component';
+import { KarriereStellenComponent } from './components/karriere/karriere-stellen/karriere-stellen.component';
+import { KarriereStellenElementComponent } from './components/karriere/karriere-stellen/karriere-stellen-element/karriere-stellen-element.component';
+import { KarriereImageComponent } from './components/karriere/karriere-image/karriere-image.component';
 
 
 @NgModule({
@@ -54,10 +55,9 @@ import { KarriereWachsenComponent } from './components/karriere/karriere-wachsen
     WelcomeComponent,
     BewerbungFormComponent,
     NavbarComponent,
-    ServiceOverviewComponent,
+    LeistungenComponent,
     PartnerOverviewComponent,
     PartnerElementComponent,
-    ServiceElementComponent,
     HistorieComponent,
     KarriereComponent,
     HistoryElementComponent,
@@ -77,7 +77,9 @@ import { KarriereWachsenComponent } from './components/karriere/karriere-wachsen
     ImpressumComponent,
     AgbComponent,
     DatenschutzComponent,
-    KarriereWachsenComponent
+    KarriereStellenComponent,
+    KarriereStellenElementComponent,
+    KarriereImageComponent
   ],
   imports: [
     BrowserModule,

@@ -1,8 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { gsap } from "gsap";
     
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-
 
 @Component({
   selector: 'app-karriere-top',
@@ -10,6 +9,9 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
   styleUrls: ['./karriere-top.component.css']
 })
 export class KarriereTopComponent {
+
+  @ViewChild('.heading_karriere') 
+  heading?: ElementRef;
 
   ngOnInit(): void {
     
@@ -24,7 +26,7 @@ export class KarriereTopComponent {
     //ScrollTrigger: Heading MainPage
     let tl_heading = gsap.timeline({scrollTrigger: {
       trigger: '.heading_karriere',
-      //start: `top ${get}`,
+      start: `top +=${this.getOffsetTop}px`,
       end: 'bottom top',
       scrub: 1,
       markers: true,
@@ -34,6 +36,10 @@ export class KarriereTopComponent {
       translateY: '-40%'
     });
 
+  }
+
+  getOffsetTop(){
+    return this.heading?.nativeElement.getBoudingClientRect().top;
   }
 
 }

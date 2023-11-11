@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { gsap } from "gsap";
     
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -10,10 +10,11 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 })
 export class WelcomeTopComponent implements OnInit{
 
-  ngOnInit(): void {
-    
-    this.initGsap();
+  @ViewChild('.heading_welcome')
+  heading?: ElementRef;
 
+  ngOnInit(): void {
+    this.initGsap();
   }
 
   initGsap(){
@@ -23,15 +24,19 @@ export class WelcomeTopComponent implements OnInit{
     //ScrollTrigger: Heading MainPage
     let tl_heading = gsap.timeline({scrollTrigger: {
       trigger: '.heading_welcome',
-      start: 'top 70%',
+      start: `top +=${this.getOffsetTop}px`,
       end: 'bottom top',
       scrub: 1,
     }});
 
     tl_heading.to('.heading_welcome', {
-      translateY: '-200%'
+      translateY: '-40%'
     });
 
+  }
+
+  getOffsetTop(){
+    return this.heading?.nativeElement.getBoudingClientRect().top;
   }
 
 }

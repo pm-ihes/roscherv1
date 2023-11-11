@@ -1,1 +1,15 @@
-<p>leistung-section works!</p>
+<div id="{{leistung.id}}" class="w-screen flex" [ngClass]="leistung.image_right ? 'flex-row-reverse' : ''">
+
+    <div class="w-3/5 h-[80vh]">
+        <img [src]="leistung.image" alt="" class="w-full h-full">
+    </div>
+
+    <div class="w-2/5 h-[80vh] bg-[var(--blue)] pt-5 sm:pt-10 ">
+        <h1 class="text-4xl text-white text-center">{{leistung.name}}</h1>
+    </div>
+</div>
+
+<div [ngSwitch]="leistung.id">
+    <app-leistung-energie *ngSwitchCase="1"></app-leistung-energie>
+
+</div>

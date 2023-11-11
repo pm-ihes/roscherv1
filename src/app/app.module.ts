@@ -48,6 +48,7 @@ import { KarriereImageComponent } from './components/karriere/karriere-image/kar
 import { LeistungenTopComponent } from './components/leistungen/leistungen-top/leistungen-top.component';
 import { LeistungenSectionsComponent } from './components/leistungen/leistungen-sections/leistungen-sections.component';
 import { LeistungSectionComponent } from './components/leistungen/leistungen-sections/leistung-section/leistung-section.component';
+import { LeistungEnergieComponent } from './components/leistungen/leistungen-sections/leistung-section/leistung-energie/leistung-energie.component';
 
 
 @NgModule({
@@ -85,7 +86,8 @@ import { LeistungSectionComponent } from './components/leistungen/leistungen-sec
     KarriereImageComponent,
     LeistungenTopComponent,
     LeistungenSectionsComponent,
-    LeistungSectionComponent
+    LeistungSectionComponent,
+    LeistungEnergieComponent
   ],
   imports: [
     BrowserModule,

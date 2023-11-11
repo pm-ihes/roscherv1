@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-leistung-section',
@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./leistung-section.component.css']
 })
 export class LeistungSectionComponent {
+
+  @Input()
+  leistung: any;
 
 }

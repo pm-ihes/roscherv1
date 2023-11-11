@@ -24,7 +24,7 @@ export class KarriereTopComponent {
     //ScrollTrigger: Heading MainPage
     let tl_heading = gsap.timeline({scrollTrigger: {
       trigger: '.heading_karriere',
-      start: 'top top',
+      //start: `top ${get}`,
       end: 'bottom top',
       scrub: 1,
       markers: true,

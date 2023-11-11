@@ -45,6 +45,9 @@ import { DatenschutzComponent } from './components/datenschutz/datenschutz.compo
 import { KarriereStellenComponent } from './components/karriere/karriere-stellen/karriere-stellen.component';
 import { KarriereStellenElementComponent } from './components/karriere/karriere-stellen/karriere-stellen-element/karriere-stellen-element.component';
 import { KarriereImageComponent } from './components/karriere/karriere-image/karriere-image.component';
+import { LeistungenTopComponent } from './components/leistungen/leistungen-top/leistungen-top.component';
+import { LeistungenSectionsComponent } from './components/leistungen/leistungen-sections/leistungen-sections.component';
+import { LeistungSectionComponent } from './components/leistungen/leistungen-sections/leistung-section/leistung-section.component';
 
 
 @NgModule({
@@ -79,7 +82,10 @@ import { KarriereImageComponent } from './components/karriere/karriere-image/kar
     DatenschutzComponent,
     KarriereStellenComponent,
     KarriereStellenElementComponent,
-    KarriereImageComponent
+    KarriereImageComponent,
+    LeistungenTopComponent,
+    LeistungenSectionsComponent,
+    LeistungSectionComponent
   ],
   imports: [
     BrowserModule,

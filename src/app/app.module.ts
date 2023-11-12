@@ -49,6 +49,9 @@ import { LeistungenTopComponent } from './components/leistungen/leistungen-top/l
 import { LeistungenSectionsComponent } from './components/leistungen/leistungen-sections/leistungen-sections.component';
 import { LeistungSectionComponent } from './components/leistungen/leistungen-sections/leistung-section/leistung-section.component';
 import { LeistungEnergieComponent } from './components/leistungen/leistungen-sections/leistung-section/leistung-energie/leistung-energie.component';
+import { LeistungHeizsystemeComponent } from './components/leistungen/leistungen-sections/leistung-section/leistung-heizsysteme/leistung-heizsysteme.component';
+import { LeistungSanitaerComponent } from './components/leistungen/leistungen-sections/leistung-section/leistung-sanitaer/leistung-sanitaer.component';
+import { LeistungKlimaComponent } from './components/leistungen/leistungen-sections/leistung-section/leistung-klima/leistung-klima.component';
 
 
 @NgModule({
@@ -87,7 +90,10 @@ import { LeistungEnergieComponent } from './components/leistungen/leistungen-sec
     LeistungenTopComponent,
     LeistungenSectionsComponent,
     LeistungSectionComponent,
-    LeistungEnergieComponent
+    LeistungEnergieComponent,
+    LeistungHeizsystemeComponent,
+    LeistungSanitaerComponent,
+    LeistungKlimaComponent
   ],
   imports: [
     BrowserModule,

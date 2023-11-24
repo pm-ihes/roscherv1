@@ -1,0 +1,4 @@
+.fakten li{
+    list-style: inside !important;
+    list-style-type: '👉' !important;
+}

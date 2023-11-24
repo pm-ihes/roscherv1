@@ -43,7 +43,7 @@ export class WelcomeServiceOverviewComponent implements OnInit {
           trigger: '.loesungen_cards_top',
           start: 'top bottom',
           end: 'top 50%',
-          scrub: 1
+          scrub: 2
         }
       });
 
@@ -57,8 +57,7 @@ export class WelcomeServiceOverviewComponent implements OnInit {
           trigger: '.loesungen_cards_bottom',
           start: 'top bottom',
           end: 'top 50%',
-          markers: true,
-          scrub: 1,
+          scrub: 2
         }
       });
 

@@ -19,11 +19,11 @@ export class LeistungenTopComponent {
       iconPath: "../../../../assets/icons/icon-leistungen-eEnergien.svg"
     },
     {
-      name: "intelligente Heizsystem",
+      name: "Intelligente Heizsystem",
       iconPath: "../../../../assets/icons/icon-leistungen-heizsysteme.svg"
     },
     {
-      name: "moderne Sanitäranlagen",
+      name: "Moderne Sanitäranlagen",
       iconPath: "../../../../assets/icons/icon-leistungen-sanitaer.svg"
     },
     {
@@ -46,8 +46,7 @@ export class LeistungenTopComponent {
       trigger: '.heading_leistungen',
       start: `top +=${this.getOffsetTop}px`,
       end: 'bottom top',
-      scrub: 1,
-      markers: true,
+      scrub: 1
     }});
 
     tl_heading.to('.heading_leistungen', {

@@ -18,7 +18,7 @@ export class ContactComponent implements OnInit {
   email = "";
   subject = "";
   message = "";
-  file?: any;
+  files: any[] = [];
 
   constructor(private formBuilder: FormBuilder, private httpService: HttpService, private http: HttpClient, private router: Router, private toastr: ToastrService,
     private zone: NgZone) { }
@@ -65,7 +65,11 @@ export class ContactComponent implements OnInit {
         });
 
     const formData = new FormData();
-    formData.append('file', this.file);
+    
+    formData.append('name', this.name);
+    formData.append('email', this.email);
+    formData.append('file', this.files[0]);
+    formData.append('file', this.files[1]);
 
     this.http.post('http://127.0.0.1:3000/upload', formData).subscribe(
       (response) => {
@@ -78,8 +82,10 @@ export class ContactComponent implements OnInit {
   }
 
   handleFileInput(event: any) {
-    this.file = event.target.files[0];
-    console.log(this.file);
+    for (let i = 0; i < event.target.files.length; i++) {
+      this.files[i] = event.target.files[i];
+    }
+  
   }
 
 }

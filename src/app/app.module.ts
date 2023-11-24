@@ -12,7 +12,6 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatIconModule} from '@angular/material/icon';
-import { BewerbungFormComponent } from './components/bewerbung-form/bewerbung-form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { GoogleMapsModule } from '@angular/google-maps'
 import {MatInputModule} from '@angular/material/input';
@@ -52,6 +51,9 @@ import { LeistungEnergieComponent } from './components/leistungen/leistungen-sec
 import { LeistungHeizsystemeComponent } from './components/leistungen/leistungen-sections/leistung-section/leistung-heizsysteme/leistung-heizsysteme.component';
 import { LeistungSanitaerComponent } from './components/leistungen/leistungen-sections/leistung-section/leistung-sanitaer/leistung-sanitaer.component';
 import { LeistungKlimaComponent } from './components/leistungen/leistungen-sections/leistung-section/leistung-klima/leistung-klima.component';
+import { KarriereFormularComponent } from './components/karriere/karriere-formular/karriere-formular.component';
+import { KlimaZentralesSystemComponent } from './components/leistungen/leistungen-sections/leistung-section/leistung-klima/klima-zentrales-system/klima-zentrales-system.component';
+import { KlimaDezentralesSystemComponent } from './components/leistungen/leistungen-sections/leistung-section/leistung-klima/klima-dezentrales-system/klima-dezentrales-system.component';
 
 
 @NgModule({
@@ -60,7 +62,7 @@ import { LeistungKlimaComponent } from './components/leistungen/leistungen-secti
     FooterComponent,
     ContactComponent,
     WelcomeComponent,
-    BewerbungFormComponent,
+    KarriereFormularComponent,
     NavbarComponent,
     LeistungenComponent,
     PartnerOverviewComponent,
@@ -93,7 +95,10 @@ import { LeistungKlimaComponent } from './components/leistungen/leistungen-secti
     LeistungEnergieComponent,
     LeistungHeizsystemeComponent,
     LeistungSanitaerComponent,
-    LeistungKlimaComponent
+    LeistungKlimaComponent,
+    KarriereFormularComponent,
+    KlimaZentralesSystemComponent,
+    KlimaDezentralesSystemComponent
   ],
   imports: [
     BrowserModule,

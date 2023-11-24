@@ -5,7 +5,7 @@
     --blue: #24415c;
     --blue2: #6c7794;
     --bg: #fff;
-    --accent: #7158e2;
+    --accent: #00a8ff;
 }
 
 ::-webkit-scrollbar {
@@ -30,6 +30,7 @@
 html, body { 
     height: 100%;
     width: 100vw;
+    scroll-behavior: smooth;
 }
 body { 
     margin: 0; 

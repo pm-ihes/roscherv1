@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { ExtraOptions, RouterModule, Routes } from '@angular/router';
 import { WelcomeComponent } from './components/welcome/welcome.component';
 import { ContactComponent } from './components/contact/contact.component';
-import { BewerbungFormComponent } from './components/bewerbung-form/bewerbung-form.component';
+import { KarriereFormularComponent } from './components/karriere/karriere-formular/karriere-formular.component';
 import { LeistungenComponent } from './components/leistungen/leistungen.component';
 import { PartnerOverviewComponent } from './components/partner-overview/partner-overview.component';
 import { HistorieComponent } from './components/historie/historie.component';
@@ -17,7 +17,6 @@ const routes: Routes = [
   {path: "", redirectTo: "home", pathMatch: 'full'},
   {path: "home", component: WelcomeComponent, canActivate: [scrollGuard]},
   {path: "kontakt", component: ContactComponent, canActivate: [scrollGuard]},
-  {path: "bewerbung", component: BewerbungFormComponent, canActivate: [scrollGuard]},
   {path: "leistungen", component: LeistungenComponent, canActivate: [scrollGuard]},
   {path: "partner", component: PartnerOverviewComponent, canActivate: [scrollGuard]},
   {path: "historie", component: HistorieComponent, canActivate: [scrollGuard]},

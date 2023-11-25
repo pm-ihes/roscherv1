@@ -1,0 +1,5 @@
+.funktionen li{
+    list-style: outside !important;
+    list-style-type: '⭐  ' !important;
+    padding-top: 10px;
+}

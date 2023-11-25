@@ -52,8 +52,9 @@ import { LeistungHeizsystemeComponent } from './components/leistungen/leistungen
 import { LeistungSanitaerComponent } from './components/leistungen/leistungen-sections/leistung-section/leistung-sanitaer/leistung-sanitaer.component';
 import { LeistungKlimaComponent } from './components/leistungen/leistungen-sections/leistung-section/leistung-klima/leistung-klima.component';
 import { KarriereFormularComponent } from './components/karriere/karriere-formular/karriere-formular.component';
-import { KlimaZentralesSystemComponent } from './components/leistungen/leistungen-sections/leistung-section/leistung-klima/klima-zentrales-system/klima-zentrales-system.component';
-import { KlimaDezentralesSystemComponent } from './components/leistungen/leistungen-sections/leistung-section/leistung-klima/klima-dezentrales-system/klima-dezentrales-system.component';
+import { LueftungZentralesSystemComponent } from './components/leistungen/leistungen-sections/leistung-section/leistung-klima/lueftung-zentrales-system/lueftung-zentrales-system.component';
+import { LueftungDezentralesSystemComponent } from './components/leistungen/leistungen-sections/leistung-section/leistung-klima/lueftung-dezentrales-system/lueftung-dezentrales-system.component';
+import { KlimaSystemComponent } from './components/leistungen/leistungen-sections/leistung-section/leistung-klima/klima-system/klima-system.component';
 
 
 @NgModule({
@@ -97,8 +98,9 @@ import { KlimaDezentralesSystemComponent } from './components/leistungen/leistun
     LeistungSanitaerComponent,
     LeistungKlimaComponent,
     KarriereFormularComponent,
-    KlimaZentralesSystemComponent,
-    KlimaDezentralesSystemComponent
+    LueftungZentralesSystemComponent,
+    LueftungDezentralesSystemComponent,
+    KlimaSystemComponent
   ],
   imports: [
     BrowserModule,

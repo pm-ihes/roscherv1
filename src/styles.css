@@ -4,6 +4,7 @@
     --gray: #d9d9d9;
     --blue: #24415c;
     --blue2: #6c7794;
+    --green: #55a630;
     --bg: #fff;
     --accent: #00a8ff;
 }
@@ -53,6 +54,11 @@ body {
     font-size: 3.25rem;
 }
 
+.heading_sm{
+    font-weight: 500;
+    font-size: 1.75rem;
+}
+
 @media (max-width: 1500px){
     .text{
         font-size: 1.25rem;
@@ -61,14 +67,23 @@ body {
     .heading{
         font-size: 2.75rem;
     }
+
+    .heading_sm{
+        font-size: 1.5rem;
+    }
 }
 
 @media (max-width: 700px) {
     .text{
         font-size: 1rem;
     }
+
     .heading{
         font-size: 2.25rem;
+    }
+
+    .heading_sm{
+        font-size: 1.25rem;
     }
 }
 

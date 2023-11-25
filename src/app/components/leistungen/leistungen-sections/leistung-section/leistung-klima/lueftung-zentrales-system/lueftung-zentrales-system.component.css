@@ -1,0 +1,9 @@
+.fakten li{
+    list-style: outside !important;
+    list-style-type: '🔵  ' !important;
+}
+
+.vorteile li{
+    list-style: outside !important;
+    list-style-type: '✅  ' !important;
+}

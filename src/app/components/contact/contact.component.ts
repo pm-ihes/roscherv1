@@ -3,7 +3,6 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { HttpService } from 'src/app/services/http.service';
-import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 
 @Component({
   selector: 'app-contact',
@@ -18,9 +17,8 @@ export class ContactComponent implements OnInit {
   email = "";
   subject = "";
   message = "";
-  files: any[] = [];
 
-  constructor(private formBuilder: FormBuilder, private httpService: HttpService, private http: HttpClient, private router: Router, private toastr: ToastrService,
+  constructor(private formBuilder: FormBuilder, private httpService: HttpService, private router: Router, private toastr: ToastrService,
     private zone: NgZone) { }
 
   ngOnInit(): void {
@@ -63,29 +61,6 @@ export class ContactComponent implements OnInit {
             this.toastr.error('Versuche es noch einmal oder wende dich telefonisch an uns!', 'Fehler beim Senden', { positionClass: 'toast-bottom-right' });
           }
         });
-
-    const formData = new FormData();
-    
-    formData.append('name', this.name);
-    formData.append('email', this.email);
-    formData.append('file', this.files[0]);
-    formData.append('file', this.files[1]);
-
-    this.http.post('http://127.0.0.1:3000/upload', formData).subscribe(
-      (response) => {
-        console.log('Erfolgreich hochgeladen:', response);
-      },
-      (error) => {
-        console.error('Fehler beim Hochladen:', error);
-      }
-    );
-  }
-
-  handleFileInput(event: any) {
-    for (let i = 0; i < event.target.files.length; i++) {
-      this.files[i] = event.target.files[i];
-    }
-  
   }
 
 }

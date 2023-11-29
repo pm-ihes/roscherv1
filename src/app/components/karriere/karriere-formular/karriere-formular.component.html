@@ -24,15 +24,16 @@
 
     <div class="mx-2 flex pt-10
     md:w-2/3 md:mx-5">
-        <form class="min-w-[200px] max-w-[1000px] w-full m-auto h-full block rounded-md" 
-                        [formGroup]="applicationForm" (ngSubmit)="sendMail()">
+        <form class="min-w-[200px] max-w-[1000px] w-full m-auto h-full block rounded-md" [formGroup]="applicationForm"
+            (ngSubmit)="sendMail()">
 
             <!--Reihe1-->
             <div class="md:flex md:justify-center">
                 <!--Vorname-->
                 <div class="flex justify-center w-[90%] m-auto sm:m-0 md:w-[45%]">
                     <div class="input-group w-full sm:mr-2">
-                        <input type="text" id="firstname" formControlName="firstname" [(ngModel)]="firstname" class="input-group_input w-full mb-5" required
+                        <input type="text" id="firstname" formControlName="firstname" [(ngModel)]="firstname"
+                            class="input-group_input w-full mb-5" required
                             [class.invalid]="applicationForm.controls['firstname'].hasError('required') && applicationForm.controls['firstname'].touched">
                         <label for="firsname" class="input-group_label">Vorname:</label>
                         <p></p>
@@ -42,20 +43,22 @@
                 <!--Nachname-->
                 <div class="flex justify-center w-[90%] m-auto sm:m-0 sm:w-[45%]">
                     <div class="input-group w-full sm:ml-2">
-                        <input type="text" id="firstname" formControlName="lastname" [(ngModel)]="lastname" class="input-group_input w-full mb-5" required
+                        <input type="text" id="firstname" formControlName="lastname" [(ngModel)]="lastname"
+                            class="input-group_input w-full mb-5" required
                             [class.invalid]="applicationForm.controls['lastname'].hasError('required') && applicationForm.controls['lastname'].touched">
                         <label for="lastname" class="input-group_label">Nachname:</label>
                         <p></p>
                     </div>
                 </div>
             </div>
-            
+
             <!--Reihe2-->
             <div class="md:flex md:justify-center">
                 <!--Geburtstag-->
                 <div class="flex justify-center w-[90%] m-auto sm:m-0 md:w-[45%]">
                     <div class="input-group w-full sm:mr-2">
-                        <input type="text" id="birthday" formControlName="birthday" [(ngModel)]="birthday" class="input-group_input w-full mb-5" required
+                        <input type="text" id="birthday" formControlName="birthday" [(ngModel)]="birthday"
+                            class="input-group_input w-full mb-5" required
                             [class.invalid]="applicationForm.controls['birthday'].hasError('required') && applicationForm.controls['birthday'].touched">
                         <label for="birthday" class="input-group_label">Geburtstag:</label>
                         <p></p>
@@ -65,7 +68,8 @@
                 <!--Email-->
                 <div class="flex justify-center w-[90%] m-auto sm:m-0 md:w-[45%]">
                     <div class="input-group w-full sm:ml-2">
-                        <input type="email" id="email" formControlName="email" [(ngModel)]="email" class="input-group_input w-full mb-5" required
+                        <input type="email" id="email" formControlName="email" [(ngModel)]="email"
+                            class="input-group_input w-full mb-5" required
                             [class.invalid]="(applicationForm.controls['email'].hasError('required') || applicationForm.controls['email'].hasError('email')) && applicationForm.controls['email'].touched">
                         <label for="email" class="input-group_label"
                             [class.email-has-input]="!applicationForm.controls['email'].hasError('required')">Email:</label>
@@ -78,41 +82,58 @@
             <!--Stelle-->
             <div class="flex justify-center w-[90%] m-auto">
                 <div class="input-group w-full">
-                    <input type="text" id="job" formControlName="job" [(ngModel)]="job" class="input-group_input w-full mb-5" required
+                    <input type="text" id="job" formControlName="job" [(ngModel)]="job"
+                        class="input-group_input w-full mb-5" required
                         [class.invalid]="applicationForm.controls['job'].hasError('required') && applicationForm.controls['job'].touched">
                     <label for="job" class="input-group_label">Betreff:</label>
                     <p></p>
                 </div>
             </div>
-            
+
             <!--Reihe4-->
             <!--Text-->
             <div class="flex justify-center w-[90%] m-auto">
                 <div class="input-group w-full">
-                    <textarea id="message" formControlName="message" [(ngModel)]="message" class="input-group_textarea w-full mb-5" rows="8" required
+                    <textarea id="message" formControlName="message" [(ngModel)]="message"
+                        class="input-group_textarea w-full mb-5" rows="8" required
                         [class.invalid]="applicationForm.controls['message'].hasError('required') && applicationForm.controls['message'].touched"></textarea>
                     <label for="message" class="input-group_label">Nachricht:</label>
                     <p></p>
                 </div>
             </div>
-            
+
+            <div class="w-[90%] m-auto">
+                <!--Anschreiben-->
+                <label for="file1">
+                    <div class="w-[90%] md:w-[45%] h-10 bg-slate-500 rounded">
+
+                    </div>
+                </label>
+                <input type="file" name="file1" id="file1" (change)="handleFileInput($event)">
+
+                <!--Lebenslauf-->
+                <input type="file" name="file2" id="" (change)="handleFileInput($event)">
+            </div>
 
             <div class="flex justify-center items-center w-[90%] m-auto pb-4">
-                <input id="privacy" formControlName="privacy" aria-describedby="remember" type="checkbox" class="bg-gray-50 border-gray-300 focus:ring-3 focus:ring-blue-300 h-4 w-4 rounded" required="">
-                <label for="privacy" class="text-gray-900 pl-2">Ich bin mit der Speicherung meiner Daten zur Kontaktaufnahme einverstanden <span class="text-red-700">*</span></label>
+                <input id="privacy" formControlName="privacy" aria-describedby="remember" type="checkbox"
+                    class="bg-gray-50 border-gray-300 focus:ring-3 focus:ring-blue-300 h-4 w-4 rounded" required="">
+                <label for="privacy" class="text-gray-900 pl-2">Ich bin mit der Speicherung meiner Daten zur
+                    Kontaktaufnahme einverstanden <span class="text-red-700">*</span></label>
             </div>
-            
+
 
             <div class="block">
                 <div class="flex justify-center">
                     <button type="submit" [attr.disabled]="applicationForm.valid ? null : true"
-                    class="group mx-2 relative py-1 px-4 overflow-hidden rounded-2xl bg-[var(--red)] disabled:bg-slate-500 text-sm font-bold disabled:cursor-not-allowed disabled:line-through text-white max-[700px]:mb-2">
+                        class="group mx-2 relative py-1 px-4 overflow-hidden rounded-2xl bg-[var(--red)] disabled:bg-slate-500 text-sm font-bold disabled:cursor-not-allowed disabled:line-through text-white max-[700px]:mb-2">
                         Absenden
-                        <div class="absolute inset-0 h-full w-full scale-0 rounded-2xl transition-all duration-300 group-hover:group-enabled:scale-100 group-hover:bg-white/30"></div>
+                        <div
+                            class="absolute inset-0 h-full w-full scale-0 rounded-2xl transition-all duration-300 group-hover:group-enabled:scale-100 group-hover:bg-white/30">
+                        </div>
                     </button>
                 </div>
             </div>
         </form>
     </div>
 </div>
-

@@ -14,8 +14,6 @@ export class LeistungSectionComponent {
   @Input()
   leistung: any;
 
-
-
   ngAfterViewInit(){
     this.initGsap();
   }

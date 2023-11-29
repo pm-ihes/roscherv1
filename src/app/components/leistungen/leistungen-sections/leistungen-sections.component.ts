@@ -37,7 +37,7 @@ export class LeistungenSectionsComponent {
     },
     {
       id: 4,
-      name: "Klima- & Lüftungsanlagen",
+      name: "Klima- & Lüftungssysteme",
       image: "../../../../assets/images/image_klimaanlage.jpg",
       image_right: false,
       slogan: "Energie ist Zukunft - und Ihre beginnt jetzt!",

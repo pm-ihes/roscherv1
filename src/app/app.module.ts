@@ -27,10 +27,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { ToastrModule } from 'ngx-toastr';
 import { LoadingIndicatorComponent } from './components/loading-indicator/loading-indicator.component';
 import { WelcomeTopComponent } from './components/welcome/welcome-top/welcome-top.component';
-import { WelcomeServiceOverviewComponent } from './components/welcome/welcome-service-overview/welcome-service-overview.component';
-import { WelcomeBenefitsMainComponent } from './components/welcome/welcome-benefits-main/welcome-benefits-main.component';
+import { WelcomeLeistungenOverviewComponent } from './components/welcome/welcome-leistungen-overview/welcome-leistungen-overview.component';
+import { WelcomeSliderVorteileComponent } from './components/welcome/welcome-slider-vorteile/welcome-slider-vorteile.component';
 import { WelcomeCustomerStatsComponent } from './components/welcome/welcome-customer-stats/welcome-customer-stats.component';
-import { ServiceItemV2Component } from './components/welcome/welcome-service-overview/service-item-v2/service-item-v2.component';
+import { ServiceItemV2Component } from './components/welcome/welcome-leistungen-overview/service-item-v2/service-item-v2.component';
 import { WelcomePromoApplicationComponent } from './components/welcome/welcome-promo-application/welcome-promo-application.component';
 import { WelcomeAboutApplicationComponent } from './components/welcome/welcome-about-application/welcome-about-application.component';
 import { WelcomeJobOfferComponent } from './components/welcome/welcome-job-offer/welcome-job-offer.component';
@@ -73,8 +73,8 @@ import { KlimaSystemComponent } from './components/leistungen/leistungen-section
     HistoryElementComponent,
     LoadingIndicatorComponent,
     WelcomeTopComponent,
-    WelcomeServiceOverviewComponent,
-    WelcomeBenefitsMainComponent,
+    WelcomeLeistungenOverviewComponent,
+    WelcomeSliderVorteileComponent,
     WelcomeCustomerStatsComponent,
     ServiceItemV2Component,
     WelcomePromoApplicationComponent,

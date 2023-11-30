@@ -5,11 +5,11 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/all';
 
 @Component({
-  selector: 'app-welcome-benefits-main',
-  templateUrl: './welcome-benefits-main.component.html',
-  styleUrls: ['./welcome-benefits-main.component.css']
+  selector: 'app-welcome-slider-vorteile',
+  templateUrl: './welcome-slider-vorteile.component.html',
+  styleUrls: ['./welcome-slider-vorteile.component.css']
 })
-export class WelcomeBenefitsMainComponent implements OnInit{
+export class WelcomeSliderVorteileComponent implements OnInit{
 
   ngOnInit(){
 

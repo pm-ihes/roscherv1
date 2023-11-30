@@ -4,7 +4,7 @@
 <div class="w-full m-auto py-5 px-1 bg-[var(--bg)]
 sm:px-6 md:flex lg:px-20">
 
-    <div class="animate__animated animate__fadeInLeft px-4 mx-2 pt-10
+    <div class="animate__animated animate__fadeInLeft -md:w-[90%] -md:mx-auto pt-10
     md:w-1/3 md:mx-5 sm:mb-6">
         <h2 class="font-bold text-[var(--blue)] text-4xl">Kontaktieren Sie uns ganz einfach online!</h2>
         <div class="py-6">
@@ -26,7 +26,7 @@ sm:px-6 md:flex lg:px-20">
         </div>
     </div>
 
-    <div class="animate__animated animate__fadeInRight mx-2 flex
+    <div class="animate__animated animate__fadeInRight flex
     sm:pt-10 md:w-2/3 md:mx-5">
         <form class="min-w-[200px] max-w-[1000px] w-full m-auto h-full block rounded-md " [formGroup]="contactForm"
             (ngSubmit)="sendMail()" enctype="multipart/form-data">
@@ -34,8 +34,8 @@ sm:px-6 md:flex lg:px-20">
             <!--Reihe1-->
             <div class="md:flex md:justify-center">
                 <!--Name-->
-                <div class="flex justify-center w-[90%] m-auto sm:m-0 md:w-[45%]">
-                    <div class="input-group w-full sm:mr-2">
+                <div class="flex justify-center w-[90%] m-auto md:m-0 md:w-[45%]">
+                    <div class="input-group w-full md:mr-2">
                         <input type="text" id="name" formControlName="name" [(ngModel)]="name"
                             class="input-group_input w-full mb-5" required
                             [class.invalid]="contactForm.controls['name'].hasError('required') && contactForm.controls['name'].touched">
@@ -45,8 +45,8 @@ sm:px-6 md:flex lg:px-20">
                 </div>
 
                 <!--Email-->
-                <div class="flex justify-center w-[90%] m-auto sm:m-0 md:w-[45%]">
-                    <div class="input-group w-full sm:ml-2">
+                <div class="flex justify-center w-[90%] m-auto md:m-0 md:w-[45%]">
+                    <div class="input-group w-full md:ml-2">
                         <input type="email" id="email" formControlName="email" [(ngModel)]="email"
                             class="input-group_input w-full mb-5" required
                             [class.invalid]="(contactForm.controls['email'].hasError('required') || contactForm.controls['email'].hasError('email')) && contactForm.controls['email'].touched">

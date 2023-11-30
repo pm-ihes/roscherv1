@@ -52,12 +52,23 @@
     color: var(--red);
 }
 
-/*Label accent auf Foukus*/
+/*Label accent auf Fokus*/
 .input-group_input:focus + .input-group_label,
 .input-group_textarea:focus + .input-group_label{
     color: var(--accent);
 }
 
 
+.file-input .file-box{
+    border-radius: 4px;
+    outline: 2px solid var(--blue);
+}
 
+.file-box-label{
+    height: 100%;
+    width: 30%;
+    background: var(--blue);
+    display: flex;
+    align-items: center;
+}
 

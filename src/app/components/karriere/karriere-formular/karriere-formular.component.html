@@ -1,6 +1,6 @@
 <div class="w-full m-auto py-5 sm:px-1 bg-white px-6 md:flex lg:px-20">
 
-    <div class="mb-6 px-4 mx-2 pt-10
+    <div class="mb-6 -md:w-[90%] -md:mx-auto pt-10
     md:w-1/3 md:mx-5 sm:mb-0">
         <h2 class="font-bold text-[var(--blue)] text-4xl">Bewerben Sie sich ganz einfach online!</h2>
         <div class="py-6">
@@ -22,7 +22,7 @@
         </div>
     </div>
 
-    <div class="mx-2 flex pt-10
+    <div class="flex pt-10
     md:w-2/3 md:mx-5">
         <form class="min-w-[200px] max-w-[1000px] w-full m-auto h-full block rounded-md" [formGroup]="applicationForm"
             (ngSubmit)="sendMail()">
@@ -30,8 +30,8 @@
             <!--Reihe1-->
             <div class="md:flex md:justify-center">
                 <!--Vorname-->
-                <div class="flex justify-center w-[90%] m-auto sm:m-0 md:w-[45%]">
-                    <div class="input-group w-full sm:mr-2">
+                <div class="flex justify-center w-[90%] m-auto md:m-0 md:w-[45%]">
+                    <div class="input-group w-full md:mr-2">
                         <input type="text" id="firstname" formControlName="firstname" [(ngModel)]="firstname"
                             class="input-group_input w-full mb-5" required
                             [class.invalid]="applicationForm.controls['firstname'].hasError('required') && applicationForm.controls['firstname'].touched">
@@ -41,8 +41,8 @@
                 </div>
 
                 <!--Nachname-->
-                <div class="flex justify-center w-[90%] m-auto sm:m-0 sm:w-[45%]">
-                    <div class="input-group w-full sm:ml-2">
+                <div class="flex justify-center w-[90%] m-auto md:m-0 md:w-[45%]">
+                    <div class="input-group w-full md:ml-2">
                         <input type="text" id="firstname" formControlName="lastname" [(ngModel)]="lastname"
                             class="input-group_input w-full mb-5" required
                             [class.invalid]="applicationForm.controls['lastname'].hasError('required') && applicationForm.controls['lastname'].touched">
@@ -53,10 +53,10 @@
             </div>
 
             <!--Reihe2-->
-            <div class="md:flex md:justify-center">
+            <div class="md:flex md:justify-center m-auto">
                 <!--Geburtstag-->
-                <div class="flex justify-center w-[90%] m-auto sm:m-0 md:w-[45%]">
-                    <div class="input-group w-full sm:mr-2">
+                <div class="flex justify-center w-[90%] m-auto md:m-0 md:w-[45%]">
+                    <div class="input-group w-full md:mr-2">
                         <input type="text" id="birthday" formControlName="birthday" [(ngModel)]="birthday"
                             class="input-group_input w-full mb-5" required
                             [class.invalid]="applicationForm.controls['birthday'].hasError('required') && applicationForm.controls['birthday'].touched">
@@ -66,8 +66,8 @@
                 </div>
 
                 <!--Email-->
-                <div class="flex justify-center w-[90%] m-auto sm:m-0 md:w-[45%]">
-                    <div class="input-group w-full sm:ml-2">
+                <div class="flex justify-center w-[90%] m-auto md:m-0 md:w-[45%]">
+                    <div class="input-group w-full md:ml-2">
                         <input type="email" id="email" formControlName="email" [(ngModel)]="email"
                             class="input-group_input w-full mb-5" required
                             [class.invalid]="(applicationForm.controls['email'].hasError('required') || applicationForm.controls['email'].hasError('email')) && applicationForm.controls['email'].touched">
@@ -102,17 +102,28 @@
                 </div>
             </div>
 
-            <div class="w-[90%] m-auto">
+            <div class="w-[90%] mx-auto -mt-2">
                 <!--Anschreiben-->
-                <label for="file1">
-                    <div class="w-[90%] md:w-[45%] h-10 bg-slate-500 rounded">
+                <div class="file-input">
+                    <label for="file1">
+                        <div class="file-box w-full md:w-[48%] h-10">
+                            <div class="file-box-label">
+                                <span class="material-symbols-outlined text-white">
+                                    attach_file
+                                </span>
+                                <p class="text-white">Lebenslauf</p>
+                            </div>
+                            <div class="file-box-name">
 
-                    </div>
-                </label>
-                <input type="file" name="file1" id="file1" (change)="handleFileInput($event)">
+                            </div>
+                        </div>
+                    </label>
+                </div>
+
+                <input type="file" name="file1" id="file1" (change)="handleFileInput($event)" hidden>
 
                 <!--Lebenslauf-->
-                <input type="file" name="file2" id="" (change)="handleFileInput($event)">
+                <input type="file" name="file2" id="" (change)="handleFileInput($event)" hidden>
             </div>
 
             <div class="flex justify-center items-center w-[90%] m-auto pb-4">

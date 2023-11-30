@@ -3,11 +3,11 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/all';
 
 @Component({
-  selector: 'app-welcome-service-overview',
-  templateUrl: './welcome-service-overview.component.html',
-  styleUrls: ['./welcome-service-overview.component.css']
+  selector: 'app-welcome-leistungen-overview',
+  templateUrl: './welcome-leistungen-overview.component.html',
+  styleUrls: ['./welcome-leistungen-overview.component.css']
 })
-export class WelcomeServiceOverviewComponent implements OnInit {
+export class WelcomeLeistungenOverviewComponent implements OnInit {
 
   ngOnInit() {
 
@@ -61,13 +61,10 @@ export class WelcomeServiceOverviewComponent implements OnInit {
         }
       });
 
-      tl_service_overview_cards_bottom.fromTo('.loesungen_cards_bottom', {
-        x: '80'
-      }, {
-        x: '-20'
+      tl_service_overview_cards_bottom.from('.loesungen_cards_bottom', {
+        x: '100'
       });
-
     });
-  }
 
+  }
 }

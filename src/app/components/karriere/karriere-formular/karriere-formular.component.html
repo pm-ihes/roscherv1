@@ -35,7 +35,7 @@
                         <input type="text" id="firstname" formControlName="firstname" [(ngModel)]="firstname"
                             class="input-group_input w-full mb-5" required
                             [class.invalid]="applicationForm.controls['firstname'].hasError('required') && applicationForm.controls['firstname'].touched">
-                        <label for="firsname" class="input-group_label">Vorname:</label>
+                        <label for="firsname" class="input-group_label">Vorname: <span class="text-red-700">*</span></label>
                         <p></p>
                     </div>
                 </div>
@@ -46,7 +46,7 @@
                         <input type="text" id="firstname" formControlName="lastname" [(ngModel)]="lastname"
                             class="input-group_input w-full mb-5" required
                             [class.invalid]="applicationForm.controls['lastname'].hasError('required') && applicationForm.controls['lastname'].touched">
-                        <label for="lastname" class="input-group_label">Nachname:</label>
+                        <label for="lastname" class="input-group_label">Nachname: <span class="text-red-700">*</span></label>
                         <p></p>
                     </div>
                 </div>
@@ -60,7 +60,7 @@
                         <input type="text" id="birthday" formControlName="birthday" [(ngModel)]="birthday"
                             class="input-group_input w-full mb-5" required
                             [class.invalid]="applicationForm.controls['birthday'].hasError('required') && applicationForm.controls['birthday'].touched">
-                        <label for="birthday" class="input-group_label">Geburtstag:</label>
+                        <label for="birthday" class="input-group_label">Geburtstag: <span class="text-red-700">*</span></label>
                         <p></p>
                     </div>
                 </div>
@@ -72,7 +72,7 @@
                             class="input-group_input w-full mb-5" required
                             [class.invalid]="(applicationForm.controls['email'].hasError('required') || applicationForm.controls['email'].hasError('email')) && applicationForm.controls['email'].touched">
                         <label for="email" class="input-group_label"
-                            [class.email-has-input]="!applicationForm.controls['email'].hasError('required')">Email:</label>
+                            [class.email-has-input]="!applicationForm.controls['email'].hasError('required')">Email: <span class="text-red-700">*</span></label>
                         <p></p>
                     </div>
                 </div>
@@ -85,7 +85,7 @@
                     <input type="text" id="job" formControlName="job" [(ngModel)]="job"
                         class="input-group_input w-full mb-5" required
                         [class.invalid]="applicationForm.controls['job'].hasError('required') && applicationForm.controls['job'].touched">
-                    <label for="job" class="input-group_label">Betreff:</label>
+                    <label for="job" class="input-group_label">Betreff: <span class="text-red-700">*</span></label>
                     <p></p>
                 </div>
             </div>
@@ -97,33 +97,48 @@
                     <textarea id="message" formControlName="message" [(ngModel)]="message"
                         class="input-group_textarea w-full mb-5" rows="8" required
                         [class.invalid]="applicationForm.controls['message'].hasError('required') && applicationForm.controls['message'].touched"></textarea>
-                    <label for="message" class="input-group_label">Nachricht:</label>
+                    <label for="message" class="input-group_label">Nachricht: <span class="text-red-700">*</span></label>
                     <p></p>
                 </div>
             </div>
 
-            <div class="w-[90%] mx-auto -mt-2">
+            <div class="w-[90%] mx-auto -mt-2 md:flex md:justify-between">
                 <!--Anschreiben-->
-                <div class="file-input">
+                <div class="file-input md:w-[49%]">
                     <label for="file1">
-                        <div class="file-box w-full md:w-[48%] h-10">
+                        <div class="file-box">
+                            <div class="file-box-label">
+                                <span class="material-symbols-outlined text-white">
+                                    attach_file
+                                </span>
+                                <p class="text-white">Anschreiben</p>
+                            </div>
+                            <div class="file-box-text">
+                                <p class="text-[var(--blue)]">Platzhalter</p>
+                            </div>
+                        </div>
+                    </label>
+                    <input type="file" name="file1" id="file1" (change)="handleFileInput($event)" hidden>
+                </div>
+
+                <!--Lebenslauf-->
+                <div class="file-input md:w-[49%]">
+                    <label for="file1">
+                        <div class="file-box">
                             <div class="file-box-label">
                                 <span class="material-symbols-outlined text-white">
                                     attach_file
                                 </span>
                                 <p class="text-white">Lebenslauf</p>
                             </div>
-                            <div class="file-box-name">
+                            <div class="file-box-text">
 
                             </div>
                         </div>
                     </label>
+                    <input type="file" name="file2" id="file2" (change)="handleFileInput($event)" hidden>
                 </div>
-
-                <input type="file" name="file1" id="file1" (change)="handleFileInput($event)" hidden>
-
-                <!--Lebenslauf-->
-                <input type="file" name="file2" id="" (change)="handleFileInput($event)" hidden>
+                
             </div>
 
             <div class="flex justify-center items-center w-[90%] m-auto pb-4">

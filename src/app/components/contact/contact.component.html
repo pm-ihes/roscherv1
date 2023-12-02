@@ -39,7 +39,7 @@ sm:px-6 md:flex lg:px-20">
                         <input type="text" id="name" formControlName="name" [(ngModel)]="name"
                             class="input-group_input w-full mb-5" required
                             [class.invalid]="contactForm.controls['name'].hasError('required') && contactForm.controls['name'].touched">
-                        <label for="name" class="input-group_label">Name/Firma:</label>
+                        <label for="name" class="input-group_label">Name/Firma: <span class="text-red-700">*</span></label>
                         <p></p>
                     </div>
                 </div>
@@ -51,7 +51,7 @@ sm:px-6 md:flex lg:px-20">
                             class="input-group_input w-full mb-5" required
                             [class.invalid]="(contactForm.controls['email'].hasError('required') || contactForm.controls['email'].hasError('email')) && contactForm.controls['email'].touched">
                         <label for="email" class="input-group_label"
-                            [class.email-has-input]="!contactForm.controls['email'].hasError('required')">Email:</label>
+                            [class.email-has-input]="!contactForm.controls['email'].hasError('required')">Email: <span class="text-red-700">*</span></label>
                         <p></p>
                     </div>
                 </div>
@@ -64,7 +64,7 @@ sm:px-6 md:flex lg:px-20">
                     <input type="text" id="subject" formControlName="subject" [(ngModel)]="subject"
                         class="input-group_input w-full mb-5" required
                         [class.invalid]="contactForm.controls['subject'].hasError('required') && contactForm.controls['subject'].touched">
-                    <label for="subject" class="input-group_label">Betreff:</label>
+                    <label for="subject" class="input-group_label">Betreff: <span class="text-red-700">*</span></label>
                     <p></p>
                 </div>
             </div>
@@ -76,7 +76,7 @@ sm:px-6 md:flex lg:px-20">
                     <textarea id="message" formControlName="message" [(ngModel)]="message"
                         class="input-group_textarea w-full mb-5" rows="8" required
                         [class.invalid]="contactForm.controls['message'].hasError('required') && contactForm.controls['message'].touched"></textarea>
-                    <label for="message" class="input-group_label">Nachricht:</label>
+                    <label for="message" class="input-group_label">Nachricht: <span class="text-red-700">*</span></label>
                     <p></p>
                 </div>
             </div>

@@ -18,11 +18,11 @@ import {MatInputModule} from '@angular/material/input';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { LeistungenComponent } from './components/leistungen/leistungen.component';
 import {MatDividerModule} from '@angular/material/divider';
-import { PartnerOverviewComponent } from './components/partner-overview/partner-overview.component';
-import { PartnerElementComponent } from './components/partner-overview/partner-element/partner-element.component';
-import { HistorieComponent } from './components/historie/historie.component';
+import { PartnerOverviewComponent } from './components/unternehmen/partner-overview/partner-overview.component';
+import { PartnerElementComponent } from './components/unternehmen/partner-overview/partner-element/partner-element.component';
+import { HistorieComponent } from './components/unternehmen/historie/historie.component';
 import { KarriereComponent } from './components/karriere/karriere.component';
-import { HistoryElementComponent } from './components/historie/history-element/history-element.component';
+import { HistoryElementComponent } from './components/unternehmen/historie/history-element/history-element.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ToastrModule } from 'ngx-toastr';
 import { LoadingIndicatorComponent } from './components/loading-indicator/loading-indicator.component';
@@ -30,7 +30,7 @@ import { WelcomeTopComponent } from './components/welcome/welcome-top/welcome-to
 import { WelcomeLeistungenOverviewComponent } from './components/welcome/welcome-leistungen-overview/welcome-leistungen-overview.component';
 import { WelcomeSliderVorteileComponent } from './components/welcome/welcome-slider-vorteile/welcome-slider-vorteile.component';
 import { WelcomeCustomerStatsComponent } from './components/welcome/welcome-customer-stats/welcome-customer-stats.component';
-import { ServiceItemV2Component } from './components/welcome/welcome-leistungen-overview/service-item-v2/service-item-v2.component';
+import { LeistungItemV2Component } from './components/welcome/welcome-leistungen-overview/leistung-item-v2/leistung-item-v2.component';
 import { WelcomePromoApplicationComponent } from './components/welcome/welcome-promo-application/welcome-promo-application.component';
 import { WelcomeAboutApplicationComponent } from './components/welcome/welcome-about-application/welcome-about-application.component';
 import { WelcomeJobOfferComponent } from './components/welcome/welcome-job-offer/welcome-job-offer.component';
@@ -55,6 +55,8 @@ import { KarriereFormularComponent } from './components/karriere/karriere-formul
 import { LueftungZentralesSystemComponent } from './components/leistungen/leistungen-sections/leistung-section/leistung-klima/lueftung-zentrales-system/lueftung-zentrales-system.component';
 import { LueftungDezentralesSystemComponent } from './components/leistungen/leistungen-sections/leistung-section/leistung-klima/lueftung-dezentrales-system/lueftung-dezentrales-system.component';
 import { KlimaSystemComponent } from './components/leistungen/leistungen-sections/leistung-section/leistung-klima/klima-system/klima-system.component';
+import { UnternehmenComponent } from './components/unternehmen/unternehmen.component';
+import { UnternehmenTopComponent } from './components/unternehmen/unternehmen-top/unternehmen-top.component';
 
 
 @NgModule({
@@ -76,7 +78,7 @@ import { KlimaSystemComponent } from './components/leistungen/leistungen-section
     WelcomeLeistungenOverviewComponent,
     WelcomeSliderVorteileComponent,
     WelcomeCustomerStatsComponent,
-    ServiceItemV2Component,
+    LeistungItemV2Component,
     WelcomePromoApplicationComponent,
     WelcomeAboutApplicationComponent,
     WelcomeJobOfferComponent,
@@ -100,7 +102,9 @@ import { KlimaSystemComponent } from './components/leistungen/leistungen-section
     KarriereFormularComponent,
     LueftungZentralesSystemComponent,
     LueftungDezentralesSystemComponent,
-    KlimaSystemComponent
+    KlimaSystemComponent,
+    UnternehmenComponent,
+    UnternehmenTopComponent
   ],
   imports: [
     BrowserModule,

@@ -7,10 +7,7 @@ import { ScrollTrigger } from 'gsap/all';
   templateUrl: './welcome.component.html',
   styleUrls: ['./welcome.component.css']
 })
-export class WelcomeComponent implements OnInit{
+export class WelcomeComponent{
 
-  ngOnInit(): void {
-    throw new Error('Method not implemented.');
-  }
 
 }

@@ -17,6 +17,7 @@ export class KarriereFormularComponent {
   birthday = "";
   job = "";
   message = "";
+
   files: any[] = [];
 
   constructor(private formBuilder: FormBuilder, private http: HttpClient,) { }
@@ -55,11 +56,12 @@ export class KarriereFormularComponent {
       });
   }
 
-  handleFileInput(event: any) {
-    for (let i = 0; i < event.target.files.length; i++) {
-      this.files[i] = event.target.files[i];
-    }
+  /** 
+  *@param fId: Number of File (1 or 2)
+  */  
 
+  handleFileInput(event: any, fId: number) {
+    this.files[fId-1] = event.target.files[0];
   }
 
 }

@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { ExtraOptions, RouterModule, Routes } from '@angular/router';
 import { WelcomeComponent } from './components/welcome/welcome.component';
 import { ContactComponent } from './components/contact/contact.component';
-import { KarriereFormularComponent } from './components/karriere/karriere-formular/karriere-formular.component';
 import { LeistungenComponent } from './components/leistungen/leistungen.component';
 import { PartnerOverviewComponent } from './components/unternehmen/partner-overview/partner-overview.component';
 import { HistorieComponent } from './components/unternehmen/historie/historie.component';
@@ -13,6 +12,7 @@ import { ImpressumComponent } from './components/impressum/impressum.component';
 import { AgbComponent } from './components/agb/agb.component';
 import { DatenschutzComponent } from './components/datenschutz/datenschutz.component';
 import { UnternehmenComponent } from './components/unternehmen/unternehmen.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
 
 const routes: Routes = [
   {path: "", redirectTo: "home", pathMatch: 'full'},
@@ -27,6 +27,9 @@ const routes: Routes = [
   {path: "agb", component: AgbComponent, canActivate: [scrollGuard]},
   {path: "datenschutz", component: DatenschutzComponent, canActivate: [scrollGuard]},
   {path: "unternehmen", component: UnternehmenComponent, canActivate: [scrollGuard]},
+
+  {path: "404", component: NotFoundComponent, canActivate: [scrollGuard]},
+  {path: "**", component: NotFoundComponent, canActivate: [scrollGuard]}
 ];
 
 const routerOptions: ExtraOptions = {

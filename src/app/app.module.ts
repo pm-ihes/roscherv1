@@ -57,6 +57,7 @@ import { LueftungDezentralesSystemComponent } from './components/leistungen/leis
 import { KlimaSystemComponent } from './components/leistungen/leistungen-sections/leistung-section/leistung-klima/klima-system/klima-system.component';
 import { UnternehmenComponent } from './components/unternehmen/unternehmen.component';
 import { UnternehmenTopComponent } from './components/unternehmen/unternehmen-top/unternehmen-top.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
 
 
 @NgModule({
@@ -104,7 +105,8 @@ import { UnternehmenTopComponent } from './components/unternehmen/unternehmen-to
     LueftungDezentralesSystemComponent,
     KlimaSystemComponent,
     UnternehmenComponent,
-    UnternehmenTopComponent
+    UnternehmenTopComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,

@@ -22,8 +22,8 @@
           md:justify-center md:w-max md:ml-10
           nav_sm:hidden">
         <div class="px-3">
-          <li class="home-item font-semibold text-lg list-none" routerLink="home" routerLinkActive="active">
-            <span class="link link-underline text-white">Willkommen<span class="material-symbols-outlined align-middle">stat_minus_1</span></span>
+          <li class="home-item font-semibold text-lg list-none" routerLinkActive="active">
+            <span  routerLink="home" class="link link-underline text-white">Willkommen<span class="material-symbols-outlined align-middle">stat_minus_1</span></span>
             <ul class="home-menu">
               <div class="bg-slate-700/70 pb-2">
                 <li [routerLink]="['/home']" fragment="loesungen">Unsere Lösungen</li>
@@ -35,8 +35,8 @@
           </li>
         </div>
         <div class="px-3 service-item ">
-          <li class="font-semibold text-lg list-none" routerLink="leistungen" routerLinkActive="active">
-            <span class="link link-underline text-white">Leistungen<span class="material-symbols-outlined align-middle">stat_minus_1</span></span>
+          <li class="font-semibold text-lg list-none" routerLinkActive="active">
+            <span routerLink="leistungen" class="link link-underline text-white">Leistungen<span class="material-symbols-outlined align-middle">stat_minus_1</span></span>
             <ul class="service-menu">
               <div class="bg-slate-700/70 pb-2">
                 <li [routerLink]="['/leistungen']" fragment="1">erneuerbare Energien</li>
@@ -48,8 +48,10 @@
           </li>
         </div>
         <div class="px-3">
-          <li class="unternehmen-item font-semibold text-lg list-none" routerLink="unternehmen" routerLinkActive="active">
-            <span class="link link-underline text-white">Unternehmen<span class="material-symbols-outlined align-middle">stat_minus_1</span></span>
+          <li class="unternehmen-item font-semibold text-lg list-none" routerLinkActive="active">
+            <span routerLink="unternehmen" class="link link-underline text-white">
+              Unternehmen<span class="material-symbols-outlined align-middle">stat_minus_1</span>
+            </span>
             <ul class="unternehmen-menu">
               <div class="bg-slate-700/70 pb-2">
                 <li routerLink="historie">Historie</li>

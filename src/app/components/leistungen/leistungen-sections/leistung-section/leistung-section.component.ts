@@ -43,7 +43,6 @@ export class LeistungSectionComponent {
       gsap.from(`#${this.leistung.gsap_trigger_id}`, {
         scrollTrigger: `#${this.leistung.gsap_trigger_id}`,
         translateX: '-20px',
-        start: 'top 40%',
         duration: 1
       });
     });

@@ -1,0 +1,5 @@
+<div class="w-full sm:h-96 sm:flex justify-center gap-2">
+    <div *ngFor="let card of cards" class="card" (mouseenter)="addActive($event)">
+        <img [src]="card.image" alt="">
+    </div>
+</div>

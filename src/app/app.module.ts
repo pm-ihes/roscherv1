@@ -58,6 +58,7 @@ import { KlimaSystemComponent } from './components/leistungen/leistungen-section
 import { UnternehmenComponent } from './components/unternehmen/unternehmen.component';
 import { UnternehmenTopComponent } from './components/unternehmen/unternehmen-top/unternehmen-top.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
+import { ImageSliderComponent } from './components/leistungen/leistungen-sections/leistung-section/leistung-sanitaer/image-slider/image-slider.component';
 
 
 @NgModule({
@@ -106,7 +107,8 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
     KlimaSystemComponent,
     UnternehmenComponent,
     UnternehmenTopComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    ImageSliderComponent
   ],
   imports: [
     BrowserModule,

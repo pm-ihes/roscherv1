@@ -21,7 +21,7 @@ module.exports = {
       'nav_md': {'min': '801px', 'max': '1100px'},
     },
   },
-  plugins: [],
+  plugins: [require('tailwind-hamburgers')],
   important: true,
 }
 

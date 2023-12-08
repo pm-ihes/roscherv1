@@ -2,6 +2,8 @@
     width: 10%;
     height: 100%;
     transition: ease-in 300ms;
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 .active{
@@ -11,6 +13,9 @@
 .card img{
     height: 100%;
     object-fit: cover;
-    border-radius: 10px;
+    
 }
 
+.active .menu{
+    height: 80% !important;
+}

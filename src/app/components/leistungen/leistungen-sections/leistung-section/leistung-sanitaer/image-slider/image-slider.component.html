@@ -1,4 +1,4 @@
-<div class="w-full sm:h-96 sm:flex justify-center gap-2 -md:hidden">
+<div *ngIf="!isMobile" class="w-full sm:h-96 sm:flex justify-center gap-2">
     <div *ngFor="let card of cards" class="card relative" (mouseenter)="addActive($event)">
         <img [src]="card.image" alt="">
         <div class="absolute bottom-0 bg-[var(--blue)] w-full h-10 z-10 ease-in duration-300" [ngClass]="{'menu': menuOpened}">
@@ -7,13 +7,26 @@
                   <div class="tham-inner bg-white"></div>
                 </div>
             </div>
+            <div class="pt-5 text-center text-white">
+                <h1 class="text-white font-semibold underline pb-2">Was wir bieten:</h1>
+                <ul *ngIf="menuOpened" class="">
+                    <li *ngFor="let note of card.notes; index as i">{{card.notes[i]}}</li>
+                </ul>
+            </div>
         </div>
     </div>
 </div>
 
-<div class="w-full flex flex-col md:hidden">
-    <div *ngFor="let card of cards" class="aos-animate aos-init h-[400px] w-[90%] mx-auto pb-6" data-aos="fade-up" data-aos-duration="1000">
-        <img [src]="card.image" alt="" class="rounded-xl h-full w-full object-cover">
-        
+<div *ngIf="isMobile" class="w-full flex flex-col">
+    <div *ngFor="let card of cards; index as i" class="aos-animate aos-init w-[90%] mx-auto mb-6" data-aos="fade-up" data-aos-duration="1000">
+        <img [src]="card.image" alt="" class="rounded-t-xl h-[400px] w-full object-cover">
+        <div class="bg-[var(--blue)] w-full h-10 z-10 ease-in duration-300" [ngClass]="{'menu': menuOpened}">
+            <div class="tham tham-e-squeeze tham-w-6 mx-auto pt-4" (click)="toggleMenu($event, i)">
+                <div class="tham-box">
+                  <div class="tham-inner bg-white"></div>
+                </div>
+            </div>
+        </div>
+        <div class="mobile-notes"></div>
     </div>
 </div>

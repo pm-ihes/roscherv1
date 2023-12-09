@@ -1,5 +1,5 @@
 .card{
-    width: 10%;
+    width: 12%;
     height: 100%;
     transition: ease-in 300ms;
     border-radius: 10px;
@@ -7,15 +7,25 @@
 }
 
 .active{
-    width: 20%;
+    width: 23%;
 }
 
 .card img{
     height: 100%;
     object-fit: cover;
-    
 }
 
 .active .menu{
-    height: 80% !important;
+    height: 50% !important;
+}
+
+.mobile-notes{
+    transition: ease-in 300ms;
+    background-color: var(--blue);
+    width: 100%;
+    height: 0;
+}
+
+.mobile-notes.active{
+    height: 200px;
 }

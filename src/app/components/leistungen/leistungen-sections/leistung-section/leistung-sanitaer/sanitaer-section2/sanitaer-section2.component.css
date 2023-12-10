@@ -1,0 +1,5 @@
+.vorteile li{
+    list-style-type: '✅  ' !important;
+    list-style-position: inside !important;
+    padding-bottom: 1rem;
+}

@@ -19,27 +19,27 @@ export class ImageSliderComponent {
 
   cards = [
     {
-      image: 'assets/images/image_team.jpg',
+      image: 'assets/images/image_waschplatz.jpg',
       text: '',
       notes: ['Armaturen','Waschbecken', 'Waschtisch']
     },
     {
-      image: 'assets/images/image_team.jpg',
+      image: 'assets/images/image_dusche.jpg',
       text: '',
       notes: ['Duschen','Offene Duschen', 'Duschwannen']
     },
     {
-      image: 'assets/images/image_team.jpg',
+      image: 'assets/images/image_wc.jpg',
       text: '',
       notes: ['WCs','Urinale', 'Bidets', 'Dusch-WCs']
     },
     {
-      image: 'assets/images/image_team.jpg',
+      image: 'assets/images/image_badewanne.jpg',
       text: '',
       notes: ['Freistehende Badewanne','Eckbadewanne', 'Whirlpool']
     },
     {
-      image: 'assets/images/image_team.jpg',
+      image: 'assets/images/image_zubehoer.jpg',
       text: '',
       notes: ['Installationselemente','Halterungen']
     }

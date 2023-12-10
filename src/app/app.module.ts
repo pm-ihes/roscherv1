@@ -59,6 +59,9 @@ import { UnternehmenComponent } from './components/unternehmen/unternehmen.compo
 import { UnternehmenTopComponent } from './components/unternehmen/unternehmen-top/unternehmen-top.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { ImageSliderComponent } from './components/leistungen/leistungen-sections/leistung-section/leistung-sanitaer/image-slider/image-slider.component';
+import { SanitaerSection1Component } from './components/leistungen/leistungen-sections/leistung-section/leistung-sanitaer/sanitaer-section1/sanitaer-section1.component';
+import { SanitaerSection2Component } from './components/leistungen/leistungen-sections/leistung-section/leistung-sanitaer/sanitaer-section2/sanitaer-section2.component';
+import { SanitaerSection3Component } from './components/leistungen/leistungen-sections/leistung-section/leistung-sanitaer/sanitaer-section3/sanitaer-section3.component';
 
 
 @NgModule({
@@ -108,7 +111,10 @@ import { ImageSliderComponent } from './components/leistungen/leistungen-section
     UnternehmenComponent,
     UnternehmenTopComponent,
     NotFoundComponent,
-    ImageSliderComponent
+    ImageSliderComponent,
+    SanitaerSection1Component,
+    SanitaerSection2Component,
+    SanitaerSection3Component
   ],
   imports: [
     BrowserModule,

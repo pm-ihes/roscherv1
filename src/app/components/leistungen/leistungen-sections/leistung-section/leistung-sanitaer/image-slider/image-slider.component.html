@@ -1,3 +1,7 @@
+<div class="w-full -sm:pt-5 sm:pt-10 pb-5">
+    <h1 class="heading_sm text-[var(--blue)] text-center">Produktkategorien:</h1>
+</div>
+
 <div *ngIf="!isMobile" class="w-full sm:h-96 sm:flex justify-center gap-2">
     <div *ngFor="let card of cards" class="card relative" (mouseenter)="addActive($event)">
         <img [src]="card.image" alt="">
@@ -30,3 +34,5 @@
         <div class="mobile-notes"></div>
     </div>
 </div>
+
+<div class="sm:w-5/6 mx-auto border-b-2 border-gray-400 mt-5"></div>

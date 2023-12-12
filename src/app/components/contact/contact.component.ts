@@ -45,22 +45,25 @@ export class ContactComponent implements OnInit {
       email: this.email,
     }
 
-    this.router.navigateByUrl('loading');
-
-    this.httpService.sendEmail('http://127.0.0.1:3000/sendmail', data)
+    this.httpService.sendEmail('http://127.0.0.1:3000/contact', data)
       .subscribe(
         {
           next: () => {
-            this.router.navigateByUrl('kontakt');
             console.log(`Email erfolgreich an ${data.email} gesendet`);
-            this.toastr.success('Wir werden uns umgehend bei Ihnen melden!', 'Danke für Ihre Anfrage', { positionClass: 'toast-bottom-right' });
           },
           error: (err) => {
-            this.router.navigateByUrl('kontakt');
             console.log(err);
-            this.toastr.error('Versuche es noch einmal oder wende dich telefonisch an uns!', 'Fehler beim Senden', { positionClass: 'toast-bottom-right' });
+            this.toastr.error('Bitte melden Sie sich telefonisch bei uns.', 'Fehler beim Senden', { positionClass: 'toast-bottom-right' });
           }
         });
+
+    this.router.navigateByUrl('loading');
+    setTimeout(() => {
+      this.router.navigateByUrl('kontakt');
+      this.toastr.success('Wir werden uns umgehend bei Ihnen melden!', 'Danke für Ihre Anfrage', { positionClass: 'toast-bottom-right' });
+    }, 100);
+
+
   }
 
 }

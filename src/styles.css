@@ -1,5 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-:root{
+:root {
     --red: #e30713;
     --gray: #d9d9d9;
     --blue: #24415c;
@@ -12,13 +12,16 @@
 ::-webkit-scrollbar {
     width: 5px;
 }
-::-webkit-scrollbar-track{
+
+::-webkit-scrollbar-track {
     background: #CBD5E0;
 }
-::-webkit-scrollbar-thumb{
+
+::-webkit-scrollbar-thumb {
     background: #2D3748;
 }
-::-webkit-scrollbar-thumb:hover{
+
+::-webkit-scrollbar-thumb:hover {
     background: #718096;
 }
 
@@ -27,41 +30,43 @@
 @tailwind utilities;
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 @import 'ngx-toastr/toastr';
-		
-html, body { 
+
+html,
+body {
     height: 100%;
     width: 100vw;
     scroll-behavior: smooth;
 }
-body { 
-    margin: 0; 
-    font-family: Poppins !important; 
+
+body {
+    margin: 0;
+    font-family: Poppins !important;
     overflow-x: hidden;
 }
 
-.pattern{
-    background-image:  radial-gradient(#24415c 0.8px, transparent 0.8px), radial-gradient(#24415c 0.8px, #e5e5f7 0.8px);
+.pattern {
+    background-image: radial-gradient(#24415c 0.8px, transparent 0.8px), radial-gradient(#24415c 0.8px, #e5e5f7 0.8px);
     background-size: 32px 32px;
-    background-position: 0 0,16px 16px;
+    background-position: 0 0, 16px 16px;
 }
 
-.text{
+.text {
     font-size: 1.5rem;
 }
 
-.heading{
+.heading {
     font-weight: 700;
     font-size: 3.25rem;
 }
 
-.heading_sm{
+.heading_sm {
     font-weight: 700;
     font-size: 1.75rem;
 }
 
+/* blauer Button */
 .btn_blue {
     padding: 10px 25px;
-    font-family: "Roboto", sans-serif;
     font-weight: 500;
     background: white;
     outline: none !important;
@@ -70,14 +75,11 @@ body {
     transition: all 0.3s ease;
     position: relative;
     display: inline-block;
-  }
-  
-  .btn_blue {
     z-index: 1;
     color: var(--blue);
-  }
-  
-  .btn_blue:after {
+}
+
+.btn_blue:after {
     position: absolute;
     content: "";
     width: 100%;
@@ -87,43 +89,78 @@ body {
     z-index: -1;
     background: var(--blue);
     transition: all 0.3s ease;
-  }
-  
-  .btn_blue:hover {
+}
+
+.btn_blue:hover {
     color: white;
-  }
-  
-  .btn_blue:hover:after {
+}
+
+.btn_blue:hover:after {
     top: auto;
     bottom: 0;
     height: 100%;
-  }
+}
 
-@media (max-width: 1500px){
-    .text{
+/* weiße Button */
+.btn_white {
+    padding: 3px 10px;
+    font-weight: 500;
+    outline: none !important;
+    color: white;
+    border: 2px solid white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+}
+
+.btn_white:after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 0;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background: white;
+    transition: all 0.3s ease;
+}
+
+.btn_white:hover {
+    color: var(--blue);
+}
+
+.btn_white:hover:after {
+    top: auto;
+    bottom: 0;
+    height: 100%;
+}
+
+@media (max-width: 1500px) {
+    .text {
         font-size: 1.25rem;
     }
 
-    .heading{
+    .heading {
         font-size: 2.75rem;
     }
 
-    .heading_sm{
+    .heading_sm {
         font-size: 1.5rem;
     }
 }
 
 @media (max-width: 700px) {
-    .text{
+    .text {
         font-size: 1rem;
     }
 
-    .heading{
+    .heading {
         font-size: 2.25rem;
     }
 
-    .heading_sm{
+    .heading_sm {
         font-size: 1.25rem;
     }
 }
-

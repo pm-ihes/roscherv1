@@ -1,10 +1,10 @@
-<div class="bg-white mx-auto shadow-gray-100 w-full max-w-4xl px-5 py-4 mb-5 rounded-md">
+<div class="bg-white mx-auto shadow-gray-100 w-full max-w-4xl px-5 py-4 mb-5 rounded-md -md:max-w-[95vw]">
     <div class="flex flex-row gap-3 sm:items-center justify-between relative">
         <div>
-            <span class="text-[var(--accent)] text-sm">Wir suchen:</span>
+            <span class="text-[var(--accent)] text-sm">Wir stellen ein:</span>
             <h3 class="text font-bold mt-px">{{stellenData.name}}</h3>
-            <div [ngClass]="overviewOpen ? 'h-20' : 'h-0'" class="bg-white w-full max-w-4xl duration-300 ease-in">
-
+            <div [ngClass]="overviewOpen ? 'h-auto' : 'h-0'" class="bg-white w-full max-w-4xl duration-300 ease-in overflow-hidden">
+                <ng-content></ng-content>
             </div>
             <div class="flex items-center gap-3 mt-2">
                 <span class="bg-blue-100 text-[var(--accent)] rounded-full px-3 py-1 text-sm">Vollzeit</span>

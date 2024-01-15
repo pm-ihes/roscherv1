@@ -11,13 +11,13 @@ export class KarriereStellenComponent {
   stellen: Stelle[] = [
     {
       id: 1,
-      name: "Installateur",
+      name: "Kundendienstmonteur/ -techniker für Heizungs-, Lüftungs- und Sanitärtechnik (m/w/d)",
       ort:"",
       description:""
     },
     {
       id: 2,
-      name: "Installateur",
+      name: "Anlagenmechaniker für Heizungs-, Lüftungs- und Sanitärtechnik (m/w/d)",
       ort:"",
       description:""
     },

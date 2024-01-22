@@ -1,0 +1,65 @@
+.containerS {
+    max-width: 90vw;
+    margin: 0 auto;
+    --swiper-pagination-bottom: 0;
+}
+
+@media (max-width: 600px) {
+    .containerS {
+        max-width: 100vw;
+    }
+    
+    #partner .partner-slider {
+        height: 40vh;
+    }
+    .partner-slide {
+        width: 100vw !important;
+        height: 40vh !important;
+        display: flex;
+        justify-content: center;
+    }
+    .partner-slide .partner-slide-img img {
+        margin: 0 10vw;
+        width: 80vw !important;
+        height: 40vh !important;
+    }
+}
+
+.partner-slide {
+    margin: 1rem 0;
+    width: 10rem;
+    height: 10rem;
+    position: relative;
+}
+
+.partner-slide .partner-slide-img img {
+    width: 10rem;
+    height: 10rem;
+    object-fit: cover;
+}
+
+.partner-slide .partner-slide-content {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.partner-slide-content .partner-slide-content-bottom {
+    position: absolute;
+    bottom: 2rem;
+    left: 2rem;
+    color: var(--white);
+}
+
+.swiper-pagination{
+    padding-top: 10px;
+}
+
+::ng-deep .swiper-pagination-bullet-active {
+    background-color: white; /* your background color */
+}
+
+
+

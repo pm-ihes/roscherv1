@@ -22,7 +22,6 @@ import { PartnerOverviewComponent } from './components/unternehmen/partner-overv
 import { PartnerElementComponent } from './components/unternehmen/partner-overview/partner-element/partner-element.component';
 import { HistorieComponent } from './components/unternehmen/historie/historie.component';
 import { KarriereComponent } from './components/karriere/karriere.component';
-import { HistoryElementComponent } from './components/unternehmen/historie/history-element/history-element.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ToastrModule } from 'ngx-toastr';
 import { LoadingIndicatorComponent } from './components/loading-indicator/loading-indicator.component';
@@ -79,7 +78,6 @@ import { Stelle2Component } from './components/karriere/karriere-stellen/stelle2
     PartnerElementComponent,
     HistorieComponent,
     KarriereComponent,
-    HistoryElementComponent,
     LoadingIndicatorComponent,
     WelcomeTopComponent,
     WelcomeLeistungenOverviewComponent,

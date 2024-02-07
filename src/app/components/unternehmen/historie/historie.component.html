@@ -1,5 +1,40 @@
-<section class="w-screen overflow-hidden bg-gray-100">
+<div #hSection class="w-full">
     <!--Platzhalter Navbar-->
+    <div class="w-screen h-20"></div>
+
+    <div class="sm:w-5/6 mx-auto">
+        <h1 class="heading_sm text-[var(--blue)] text-center -sm:pt-5 sm:pt-10 pb-5 -sm:px-5">Unsere Historie seit 1804 im Überblick</h1>
+
+        <div class="pb-5">
+            <p class="text text-center -sm:px-5">
+                Stolz blicken wir auf eine lange Firmengeschichte zurück, die 1804 begann. Im folgenden haben wir eine
+                Übersicht über die wichtigsten Ereignisse unserer Entwicklung für Sie ausgearbeitet.
+            </p>
+        </div>
+    </div>
+
+    <div class="sm:py-10 -sm:py-5">
+        <div *ngFor="let item of items" #section class="w-full flex items-center">
+            <div class="sm:w-1/3 sm:h-full py-3">
+                <div class="w-[90%] h-full text-right -sm:pl-2 -sm:pr-4">
+                    <p class="text">{{ item.year }}</p>
+                </div>
+            </div>
+            <div class="sm:w-2/3 sm:h-max border-l-2 border-red-600 flex justify-center py-3 relative">
+                <div
+                    class="pointer absolute top-1/2 left-0 -translate-x-[calc(50%+1px)] -translate-y-1/2 rounded-full h-5 w-5 bg-white border-2 border-red-600"></div>
+                <div class="w-[90%]">
+                    <div class="sm:pr-4">
+                        <p class="text">{{ item.title }}</p>
+                        <p class="text-sm">{{ item.text }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--<section class="w-screen overflow-hidden bg-gray-100">
+    Platzhalter Navbar
     <div class="w-screen h-20"></div>
 
     <div class="w-full h-full">
@@ -11,32 +46,8 @@
         sm:w-[80%] sm:pt-10">
             <div class="space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px before:h-full before:w-0.5 before:bg-gradient-to-b before:from-slate-200 before:via-slate-400 before:to-slate-200
             sm:before:mx-auto sm:before:translate-x-0">
-
-                <app-history-element 
-                    [left]="true"
-                    title="Firmengründung (1804)"
-                    message="Gründung der Firma als Klempner und Kupferschmiede durch Herrn Paul Lange im Hinterhof, Brückenstraße 10 in Hainichen"
-                    [image]="false">
-                </app-history-element>
-
-                <app-history-element 
-                    [left]="false"
-                    title="1804"
-                    message="Kauf der Firma durch Familie Preuße, Anbau eines Ladengeschäftes. Firmentradition durch Fam. Preuße bis Anfang 20.Jht."
-                    [image]="true"
-                    imageSource="../../assets/images/hist_1.jpg"
-                    imageHeight="h-[40vh]"
-                    translateTop="sm:-mt-24">
-                </app-history-element>
                 
-                <app-history-element 
-                    [left]="true"
-                    title="1912"
-                    message="wurde die Firma an Hermann Enge (Schwiegersohn) verkauft."
-                    [image]="false"
-                    translateTop="sm:-mt-[20vh]"
-                    paddingBottom="sm:pb-4">
-                </app-history-element>
+            
 
                 <app-history-element 
                     [left]="true"
@@ -151,5 +162,4 @@
 
 
     </div>
-</section>
-
+</section>-->

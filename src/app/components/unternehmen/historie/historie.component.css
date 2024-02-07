@@ -1,0 +1,11 @@
+.active .pointer{
+    background: red !important;
+}
+
+.active .text, .active .text-sm{
+    transform: scale(1.05, 1.15);
+}
+
+.text, .text-sm{
+    transition: ease-in 500ms;
+}

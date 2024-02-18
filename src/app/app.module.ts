@@ -63,6 +63,7 @@ import { SanitaerSection2Component } from './components/leistungen/leistungen-se
 import { SanitaerSection3Component } from './components/leistungen/leistungen-sections/leistung-section/leistung-sanitaer/sanitaer-section3/sanitaer-section3.component';
 import { Stelle1Component } from './components/karriere/karriere-stellen/stelle1/stelle1.component';
 import { Stelle2Component } from './components/karriere/karriere-stellen/stelle2/stelle2.component';
+import { CountUpModule } from 'ngx-countup';
 
 
 @NgModule({
@@ -133,7 +134,8 @@ import { Stelle2Component } from './components/karriere/karriere-stellen/stelle2
     MatDividerModule,
     HttpClientModule,
     ToastrModule.forRoot(),
-    GoogleMapsModule
+    GoogleMapsModule,
+    CountUpModule
   ],
   providers: [],
   bootstrap: [AppComponent]

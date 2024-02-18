@@ -4,6 +4,8 @@
         <h1 class="heading font-bold text-white">Offene Stellen:</h1>
     </div>
 
+    <h1 [countUp]="100" [options]="{ enableScrollSpy: true }">100</h1>
+
     <app-karriere-stellen-element *ngFor="let stelle of stellen" [stellenData]="stelle">
         <app-stelle1 *ngIf="stelle.id === 1"></app-stelle1>
         <app-stelle2 *ngIf="stelle.id === 2"></app-stelle2>

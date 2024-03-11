@@ -47,7 +47,7 @@ export class KarriereFormularComponent {
     formData.append('file', this.files[0]);
     formData.append('file', this.files[1]);
 
-    this.http.post('http://127.0.0.1:3000/application', formData).subscribe(
+    this.http.post('http://162.19.242.254:3000/application', formData).subscribe(
       {
         next: () => {
           console.log('Erfolgreich hochgeladen');
